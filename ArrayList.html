@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        ArrayList Visualization
+    </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="visualizationPageStyle.css">
+    <!-- jqueury stuff.  Only used for the animation speed slider. -->
+    <link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">
+    <script src="ThirdParty/jquery-1.5.2.min.js"></script>
+    <script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+
+    <!-- Javascript for the actual visualization code -->
+    <script type="text/javascript" src="AnimationLibrary/CustomEvents.js"></script>
+    <script type="text/javascript" src="AnimationLibrary/UndoFunctions.js"></script>
+    <script type="text/javascript" src="AnimationLibrary/AnimatedObject.js"></script>
+    <script type="text/javascript" src="AnimationLibrary/AnimatedLabel.js"></script>
+    <script type="text/javascript" src="AnimationLibrary/AnimatedCircle.js"></script>
+    <script type="text/javascript" src="AnimationLibrary/AnimatedRectangle.js"></script>
+    <script type="text/javascript" src="AnimationLibrary/ObjectManager.js"></script>
+    <script type="text/javascript" src="AnimationLibrary/AnimationMain.js"></script>
+    <script type = "text/javascript" src = "AnimationLibrary/HighlightCircle.js"> </script>
+    <script type="text/javascript" src="AlgorithmLibrary/Algorithm.js"></script>
+    <script>
+
+
+        var ARRAYLIST_START_X = 100;
+        var ARRAYLIST_START_Y = 200;
+        var ARRAYLIST_ELEM_WIDTH = 50;
+        var ARRAYLIST_ELEM_HEIGHT = 50;
+
+        var ARRAYLIST_INSERT_X = 250;
+        var ARRAYLIST_INSERT_Y = 50;
+
+        var ARRAYLIST_ELEMS_PER_LINE = 15;
+        var ARRAYLIST_ELEM_SPACING = 50;
+        var ARRAYLIST_LINE_SPACING = 130;
+        var INDEX_COLOR = "#0000FF"
+        var SIZE = 15;
+
+        function ArrayList(am, w, h) {
+            this.init(am, w, h);
+        }
+
+        ArrayList.prototype = new Algorithm();
+        ArrayList.prototype.constructor = ArrayList;
+        ArrayList.superclass = Algorithm.prototype;
+
+
+        ArrayList.prototype.init = function (am, w, h) {
+            ArrayList.superclass.init.call(this, am, w, h);
+            this.insertControls();
+            this.nextIndex = 0;
+            this.commands = [];
+            this.setup();
+            this.initialIndex = this.nextIndex;
+            this.length = 0; // 顺序表的当前长度
+            this.currentPosition = -1; // 新增：当前位置，初始化为 -1 表示未设置
+            this.arrayValues = new Array(SIZE); // 初始化 arrayValues 数组
+            for (var i = 0; i < SIZE; i++) {
+                this.arrayValues[i] = ""; // 初始化为空字符串
+            }
+            this.posCallback(0)
+        }
+
+
+        ArrayList.prototype.insertControls = function () {
+            this.controls = [];
+            // 新增：添加文本框和 Position 按钮
+            this.indexField = addControlToAlgorithmBar("Text", "0");
+            // 设置 indexField 的宽度
+            this.indexField.style.width = "50px";
+            this.positionButton = addControlToAlgorithmBar("Button", "Pos");
+            this.positionButton.onclick = this.posCallback.bind(this);
+            this.insertField = addControlToAlgorithmBar("Text", "");
+            this.insertField.onkeydown = this.returnSubmit(this.insertField, this.insertCallback.bind(this), 6);
+            this.insertButton = addControlToAlgorithmBar("Button", "insert");
+            this.insertButton.onclick = this.insertCallback.bind(this);
+            this.controls.push(this.insertField);
+            this.controls.push(this.insertButton);
+
+            this.deleteButton = addControlToAlgorithmBar("Button", "Delete");
+            this.deleteButton.onclick = this.deleteCallback.bind(this);
+            this.controls.push(this.deleteButton);
+
+            this.clearButton = addControlToAlgorithmBar("Button", "Clear List");
+            this.clearButton.onclick = this.clearCallback.bind(this);
+            this.controls.push(this.clearButton);
+
+            // 创建提示信息框
+            this.alertBox = document.createElement("div");
+            this.alertBox.style.position = "absolute";
+            this.alertBox.style.top = "10px";
+            this.alertBox.style.left = "10px";
+            this.alertBox.style.backgroundColor = "red";
+            this.alertBox.style.color = "white";
+            this.alertBox.style.padding = "10px";
+            this.alertBox.style.display = "none";
+            document.body.appendChild(this.alertBox);
+        }
+
+        ArrayList.prototype.enableUI = function (event) {
+            for (var i = 0; i < this.controls.length; i++) {
+                this.controls[i].disabled = false;
+            }
+        }
+
+        ArrayList.prototype.disableUI = function (event) {
+            for (var i = 0; i < this.controls.length; i++) {
+                this.controls[i].disabled = true;
+            }
+        }
+
+
+        ArrayList.prototype.setup = function () {
+            this.arrayElemID = new Array(SIZE);
+            for (var i = 0; i < SIZE; i++) {
+                this.arrayElemID[i] = this.nextIndex++;
+            }
+            this.leftoverLabelID = this.nextIndex++;
+
+            this.cmd("CreateLabel", this.leftoverLabelID, "", 5, ARRAYLIST_INSERT_Y, 0);
+
+            for (var i = 0; i < SIZE; i++) {
+                var xpos = (i % ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_ELEM_SPACING + ARRAYLIST_START_X;
+                var ypos = Math.floor(i / ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_LINE_SPACING + ARRAYLIST_START_Y;
+                this.cmd("CreateRectangle", this.arrayElemID[i], "", ARRAYLIST_ELEM_WIDTH, ARRAYLIST_ELEM_HEIGHT, xpos, ypos);
+            }
+
+            // 添加序号标签
+            this.indexLabelID = new Array(SIZE);
+            for (var i = 0; i < SIZE; i++) {
+                var xpos = (i % ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_ELEM_SPACING + ARRAYLIST_START_X;
+                var ypos = Math.floor(i / ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_LINE_SPACING + ARRAYLIST_START_Y + ARRAYLIST_ELEM_HEIGHT + 10;
+                this.indexLabelID[i] = this.nextIndex++;
+                this.cmd("CreateLabel", this.indexLabelID[i], i, xpos, ypos);
+                this.cmd("SetForegroundColor", this.indexLabelID[i], INDEX_COLOR);
+            }
+
+            this.animationManager.StartNewAnimation(this.commands);
+            this.animationManager.skipForward();
+            this.animationManager.clearHistory();
+        }
+
+
+        ArrayList.prototype.reset = function () {
+            this.length = 0;
+            this.nextIndex = this.initialIndex;
+            this.currentPosition = -1; // 重置当前位置
+            for (var i = 0; i < SIZE; i++) {
+                this.arrayValues[i] = ""; // 重置 arrayValues 数组
+            }
+        }
+
+
+        ArrayList.prototype.insertCallback = function (event) {
+            if (this.currentPosition === -1) {
+                // 将 alert 改成在 canvas 显示
+                this.showAlert("请先设置位置！");
+                return;
+            }
+            if (this.length < SIZE && this.insertField.value != "") {
+                var insertVal = this.insertField.value;
+                this.insertField.value = "";
+                this.implementAction(this.insert.bind(this), insertVal);
+            }
+        }
+
+
+        ArrayList.prototype.deleteCallback = function (event) {
+            if (this.currentPosition === -1) {
+                // 将 alert 改成在 canvas 显示
+                this.showAlert("请先设置位置！");
+                return;
+            }
+            if (this.length > 0) {
+                this.implementAction(this.delete.bind(this), "");
+            }
+        }
+
+
+        ArrayList.prototype.clearCallback = function (event) {
+            this.implementAction(this.clearAll.bind(this), "");
+        }
+
+
+        ArrayList.prototype.posCallback = function (event) {
+
+            var index = parseInt(this.indexField.value);
+            if (isNaN(index) || index < 0 || index > this.length) {
+                // 将 alert 改成在 canvas 显示
+                this.showAlert("位置无效，请输入 0 到 " + (this.length - 1) + " 之间的数字！");
+                return;
+            }
+
+            this.implementAction(this.pos.bind(this), index);
+        }
+        ArrayList.prototype.pos = function (index) {
+            this.currentPosition = index;
+            var xpos = (this.currentPosition % ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_ELEM_SPACING + ARRAYLIST_START_X;
+            var ypos = ARRAYLIST_START_Y - 50;
+            // 动画指向当前位置
+            this.commands = new Array();
+            if (this.pointerID == undefined) {
+                this.pointerID = this.nextIndex++;
+                this.cmd("CreateLabel", this.pointerID, "i", xpos, ypos);
+            }
+            this.cmd("Move", this.pointerID, xpos, ypos);
+            return this.commands;
+        }
+
+
+        ArrayList.prototype.insert = function (elemToInsert) {
+            this.commands = new Array();
+            this.cmd("SetText", this.leftoverLabelID, "");
+
+            var labInsertID = this.nextIndex++;
+            var labInsertValID = this.nextIndex++;
+
+            this.cmd("CreateLabel", labInsertID, "inserting Value: ", ARRAYLIST_INSERT_X - 100, ARRAYLIST_INSERT_Y);
+            this.cmd("CreateLabel", labInsertValID, elemToInsert, ARRAYLIST_INSERT_X, ARRAYLIST_INSERT_Y);
+
+            this.cmd("Step");
+
+            // 动画演示数据移动过程
+            for (var i = this.length; i > this.currentPosition; i--) {
+                // 使用 CreateHighlightCircle 显示数据移动
+                var highlightCircleID = this.nextIndex++;
+                var xpos = ((i-1) % ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_ELEM_SPACING + ARRAYLIST_START_X;
+                var ypos =  ARRAYLIST_START_Y;
+                this.cmd("CreateHighlightCircle", highlightCircleID, INDEX_COLOR,xpos, ypos);
+                this.cmd("Step");
+                this.cmd("Move", highlightCircleID, (i % ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_ELEM_SPACING + ARRAYLIST_START_X, ypos);
+                this.cmd("SetText", this.arrayElemID[i], this.arrayValues[i - 1]); // 使用 arrayValues
+                this.arrayValues[i] = this.arrayValues[i - 1]; // 更新 arrayValues
+                this.cmd("Step");
+                this.cmd("Step");
+                this.cmd("Delete", highlightCircleID);
+            }
+
+            var xpos = (this.currentPosition % ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_ELEM_SPACING + ARRAYLIST_START_X;
+            var ypos = Math.floor(this.currentPosition / ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_LINE_SPACING + ARRAYLIST_START_Y;
+
+            this.cmd("Move", labInsertValID, xpos, ypos);
+
+            this.cmd("Step");
+            this.cmd("SetText", this.arrayElemID[this.currentPosition], elemToInsert);
+            this.arrayValues[this.currentPosition] = elemToInsert; // 更新 arrayValues
+            this.cmd("Delete", labInsertValID);
+
+            this.cmd("Step");
+            this.length = this.length + 1;
+
+            this.cmd("Delete", labInsertID);
+            this.cmd("Step");
+
+            return this.commands;
+        }
+
+
+        ArrayList.prototype.delete = function (ignored) {
+            this.commands = new Array();
+
+            var labDeleteID = this.nextIndex++;
+            var labDeleteValID = this.nextIndex++;
+
+            this.cmd("SetText", this.leftoverLabelID, "");
+
+            this.cmd("CreateLabel", labDeleteID, "Deleting Value: ", ARRAYLIST_INSERT_X - 100, ARRAYLIST_INSERT_Y);
+            this.cmd("CreateLabel", labDeleteValID, this.arrayValues[this.currentPosition], ARRAYLIST_START_X, ARRAYLIST_START_Y);
+
+            this.cmd("Move", labDeleteValID, ARRAYLIST_INSERT_X, ARRAYLIST_INSERT_Y);
+            this.cmd("Step");
+
+            // 动画演示数据移动过程
+            for (var i = this.currentPosition; i < this.length - 1; i++) {
+                var highlightCircleID = this.nextIndex++;
+                var xpos = ((i+1) % ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_ELEM_SPACING + ARRAYLIST_START_X;
+                var ypos =  ARRAYLIST_START_Y;
+                this.cmd("CreateHighlightCircle", highlightCircleID, INDEX_COLOR,xpos, ypos);
+                this.cmd("Step");
+                this.cmd("Move", highlightCircleID, (i % ARRAYLIST_ELEMS_PER_LINE) * ARRAYLIST_ELEM_SPACING + ARRAYLIST_START_X, ypos);
+                this.cmd("SetText", this.arrayElemID[i], this.arrayValues[i + 1]); // 使用 arrayValues
+                this.arrayValues[i] = this.arrayValues[i + 1]; // 更新 arrayValues
+                this.cmd("Step");
+                this.cmd("Step");
+                this.cmd("Delete", highlightCircleID);
+            }
+
+            this.cmd("SetText", this.arrayElemID[this.length - 1], "");
+            this.arrayValues[this.length - 1] = ""; // 更新 arrayValues
+
+            this.cmd("Step");
+            this.length = this.length - 1;
+
+            if (this.currentPosition >= this.length) {
+                this.currentPosition = this.length - 1;
+            }
+
+            this.cmd("Delete", labDeleteValID);
+            this.cmd("Delete", labDeleteID);
+
+            return this.commands;
+        }
+
+
+        ArrayList.prototype.clearAll = function () {
+            this.commands = new Array();
+            for (var i = 0; i < this.length; i++) {
+                this.cmd("SetText", this.arrayElemID[i], "");
+                this.arrayValues[i] = ""; // 更新 arrayValues
+            }
+            this.length = 0;
+            this.currentPosition = -1; // 重置当前位置
+            return this.commands;
+        }
+
+        // 显示提示信息的方法
+        ArrayList.prototype.showAlert = function (message) {
+            this.alertBox.innerHTML = message;
+            this.alertBox.style.display = "block";
+            setTimeout(() => {
+                this.alertBox.style.display = "none";
+            }, 3000); // 3 秒后自动隐藏
+        }
+
+        var currentAlg;
+
+        function init() {
+            var animManag = initCanvas();
+            currentAlg = new ArrayList(animManag, canvas.width, canvas.height);
+        }
+    </script>
+</head>
+
+<body onload="init();" class="VisualizationMainPage">
+<div id="container">
+    <div id="header">
+        <h1>ArrayList</h1>
+    </div>
+    <div id="mainContent">
+        <div id="algoControlSection">
+            <!-- Table for buttons to control specific animation (insert/find/etc) -->
+            <!-- (filled in by javascript code specific to the animtion) -->
+            <table id="AlgorithmSpecificControls"></table>
+        </div>
+        <!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
+        <canvas id="canvas" width="1000" height="500"></canvas>
+        <div id="generalAnimationControlSection">
+
+            <table id="GeneralAnimationControls"></table>
+        </div>
+    </div> <!-- mainContent -->
+    <div id="footer">
+        <p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+    </div>
+</div><!-- container -->
+</body>
+
+</html>
