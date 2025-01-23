@@ -1,121 +1,132 @@
 <html>
 <head>
- <link rel="stylesheet" href="visualPages.css">
- <meta charset="UTF-8">
- <title> 数据结构可视化 </title>
- <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="visualPages.css">
+    <meta charset="UTF-8">
+    <title> 数据结构可视化 </title>
+    <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body>
 
 <div class="container">
- <div class="header"><h1>数据结构可视化</h1> </div>
+    <div class="header"><h1>数据结构可视化</h1></div>
 
- <div class="content">
-  <ul>
-   <li> 线性表 </li>
-   <ul>
-    <li> <a href = "ListArray.html">顺序表</a> </li>
-    <li> 列表：链表实现（可在 <a href = "java/visualization.html">Java</a> 版本中使用） </li>
-   </ul>
+    <div class="content">
+        <ul>
+            <li> 线性表</li>
+            <ul>
+                <li><a href="LinkList.html">单链表</a></li>
+            </ul>
 
-   <li> 栈和队列 </li>
-   <ul>
-    <li> <a href = "StackArray.html">栈：数组实现</a> </li>
-    <li><a href = "StackLL.html">栈：链表实现</a> </li>
-    <li> <a href = "QueueArray.html">队列：数组实现</a> </li>
-    <li> <a href = "QueueLL.html">队列：链表实现</a> </li>
-   </ul>
+            <li> 栈和队列</li>
+            <ul>
+                <li><a href="StackArray.html">栈：数组实现</a></li>
+                <li><a href="StackLL.html">栈：链表实现</a></li>
+                <li><a href="QueueArray.html">队列：数组实现</a></li>
+                <li><a href="QueueLL.html">队列：链表实现</a></li>
+            </ul>
+            <li> 树与二叉树</li>
+            <ul>
+                <li><a href="BinTree.html">二叉树</a></li>
+                <li><a href="DisjointSets.html">并查集</a></li>
+                <li> 哈夫曼编码（可在 <a href="java/visualization.html">Java</a> 版本中使用）</li>
+            </ul>
 
-   <li> 递归 </li>
-   <ul>
-    <li> <a href = "RecFact.html">阶乘</a> </li>
-    <li><a href = "RecReverse.html">字符串反转</a> </li>
-    <li><a href = "RecQueens.html">N皇后问题</a> </li>
-   </ul>
+            <li> 图算法</li>
+            <ul>
+                <li><a href="BFS.html">广度优先搜索</a></li>
+                <li><a href="DFS.html">深度优先搜索</a></li>
+                <li><a href="Prim.html">普里姆最小生成树算法</a></li>
+                <li><a href="Kruskal.html">克鲁斯卡尔最小生成树算法</a></li>
+                <li><a href="TopoSortIndegree.html">拓扑排序（使用入度数组） </a></li>
+                <li><a href="TopoSortDFS.html">拓扑排序（使用深度优先搜索） </a></li>
+                <li><a href="Dijkstra.html">迪杰斯特拉最短路径算法</a></li>
+                <li><a href="Floyd.html">弗洛伊德 - 沃舍尔算法（所有点对最短路径）</a></li>
+                <li><a href="ConnectedComponent.html">连通分量</a></li>
+            </ul>
 
-   <li> 排序 </li>
-   <ul>
-    <li> <a href = "ComparisonSort.html">比较排序</a>
-     <ul>
-      <li> 冒泡排序 </li>
-      <li> 选择排序 </li>
-      <li> 插入排序</li>
-      <li> 希尔排序 </li>
-      <li> 归并排序 </li>
-      <li> 快速排序 </li>
-     </ul>
-    </li>
-    <li> <a href = "BucketSort.html">桶排序</a>  </li>
-    <li> <a href = "CountingSort.html">计数排序</a>  </li>
-    <li> <a href = "RadixSort.html">基数排序</a>  </li>
-    <li> <a href = "HeapSort.html">堆排序</a>  </li>
-   </ul>
 
-   <li> 查找（索引） </li>
-   <ul>
-    <li> <a href = "Search.html">二分查找和线性查找（针对已排序列表）</a> </li>
-    <li> <a href = "BST.html">二叉搜索树</a> </li>
-    <li> <a href = "AVLtree.html">AVL树（平衡二叉搜索树）</a> </li>
-    <li> <a href = "RedBlack.html">红黑树</a> </li>
-    <li> <a href = "SplayTree.html">伸展树</a> </li>
-    <li> <a href = "OpenHash.html">开放哈希表（闭地址法）</a>  </li>
-    <li> <a href = "ClosedHash.html">封闭哈希表（开地址法）</a>  </li>
-    <li> <a href = "ClosedHashBucket.html">使用桶的封闭哈希表</a>  </li>
-    <li> <a href = "Trie.html">字典树（前缀树，26叉树）</a>  </li>
-    <li> <a href = "RadixTree.html">基数树（压缩字典树）</a>  </li>
-    <li> <a href = "TST.html">三叉搜索树（带有子节点二叉搜索树的字典树）</a>  </li>
-    <li> <a href = "BTree.html">B树</a></li>
-    <li> <a href = "BPlusTree.html">B+树</a></li>
-   </ul>
+            <li> 查找（索引）</li>
+            <ul>
+                <li><a href="Search.html">二分查找和线性查找（有序表）</a></li>
+                <li><a href="BST.html">二叉搜索树</a></li>
+                <li><a href="AVLtree.html">AVL树（平衡二叉搜索树）</a></li>
+                <li><a href="RedBlack.html">红黑树</a></li>
+                <li><a href="BTree.html">B树</a></li>
+                <li><a href="BPlusTree.html">B+树</a></li
+                <li><a href="OpenHash.html">开放哈希表（闭地址法）</a></li>
+                <li><a href="ClosedHash.html">封闭哈希表（开地址法）</a></li>
+                <li><a href="ClosedHashBucket.html">使用桶的封闭哈希表</a></li>
+                <li><a href="Trie.html">字典树（前缀树，26叉树）</a></li>
+                <li><a href="RadixTree.html">基数树（压缩字典树）</a></li>
+                <li><a href="TST.html">三叉搜索树（带有子节点二叉搜索树的字典树）</a></li>
+                <li><a href="SplayTree.html">伸展树</a></li>
+            </ul>
+            <li> 排序</li>
+            <ul>
+                <li><a href="ComparisonSort.html">比较排序</a>
+                    <ul>
+                        <li> 冒泡排序</li>
+                        <li> 选择排序</li>
+                        <li> 插入排序</li>
+                        <li> 希尔排序</li>
+                        <li> 归并排序</li>
+                        <li> 快速排序</li>
+                    </ul>
+                </li>
+                <li><a href="BucketSort.html">桶排序</a></li>
+                <li><a href="CountingSort.html">计数排序</a></li>
+                <li><a href="RadixSort.html">基数排序</a></li>
+                <li><a href="HeapSort.html">堆排序</a></li>
+            </ul>
+            <li> 堆及类似堆的数据结构</li>
+            <ul>
+                <li><a href="Heap.html">堆</a></li>
+                <li><a href="BinomialQueue.html">二项队列</a></li>
+                <li><a href="FibonacciHeap.html">斐波那契堆</a></li>
+                <li><a href="LeftistHeap.html">左式堆</a></li>
+                <li><a href="SkewHeap.html">斜堆</a></li>
+            </ul>
 
-   <li> 图算法 </li>
-   <ul>
-    <li> <a href = "BFS.html">广度优先搜索</a> </li>
-    <li> <a href = "DFS.html">深度优先搜索</a> </li>
-    <li> <a href = "ConnectedComponent.html">连通分量</a> </li>
-    <li> <a href = "Dijkstra.html">迪杰斯特拉最短路径算法</a> </li>
-    <li> <a href = "Prim.html">普里姆最小生成树算法</a> </li>
-    <li> <a href = "TopoSortIndegree.html">拓扑排序（使用入度数组） </a> </li>
-    <li> <a href = "TopoSortDFS.html">拓扑排序（使用深度优先搜索） </a> </li>
-    <li> <a href = "Floyd.html">弗洛伊德 - 沃舍尔算法（所有点对最短路径）</a> </li>
-    <li> <a href = "Kruskal.html">克鲁斯卡尔最小生成树算法</a></li>
-   </ul>
+            <li> 动态规划</li>
+            <ul>
+                <li><a href="DPFib.html">计算第n个斐波那契数</a></li>
+                <li><a href="DPChange.html">找零问题</a></li>
+                <li><a href="DPLCS.html">最长公共子序列</a></li>
+            </ul>
+            <li> 几何算法</li>
+            <ul>
+                <li><a href="RotateScale2D.html">2D旋转和缩放矩阵</a></li>
+                <li><a href="RotateTranslate2D.html">2D旋转和平移矩阵</a></li>
+                <li><a href="ChangingCoordinates2D.html">2D坐标系统变换</a></li>
+                <li><a href="RotateScale3D.html">3D旋转和缩放矩阵</a></li>
+                <li><a href="ChangingCoordinates3D.html">3D坐标系统变换</a></li>
+            </ul>
+            <li> 递归</li>
+            <ul>
+                <li><a href="RecFact.html">阶乘</a></li>
+                <li><a href="RecReverse.html">字符串反转</a></li>
+                <li><a href="RecQueens.html">N皇后问题</a></li>
+            </ul>
+            <li>数据结构演示网站
+                <ul>
+                    <li  style="line-height: 2;"><a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">1. Data Structure
+                        Visualizations</a>
+                        <br>
+                        特点：此网站专注于数据结构和算法的可视化，提供了多种数据结构的动态演示，包括线性表、哈希表、堆等。它的可视化效果清晰，能够帮助你深入理解数据结构的内部工作原理。此外，网站还提供了算法复杂度分析的相关信息。本项目基于此网站修改。
+                    </li>
+                    <li  style="line-height: 2;"><a href="https://visualgo.net/zh">2. VisuAlgo</a>
+                        <br>
+                        特点：该网站提供了丰富的数据结构和算法可视化演示，涵盖了链表、栈、队列、树、图等常见数据结构，以及排序、搜索等算法。其界面简洁直观，通过动画展示数据结构的操作过程，易于理解。同时，网站还提供了代码示例，方便你对照学习。
+                    </li>
+                    <li  style="line-height: 2;"><a href="https://algorithm-visualizer.org/">3. Algorithm Visualizer</a>
+                        <br>
+                        特点：这个网站不仅可以可视化常见的数据结构和算法，还支持用户自定义代码并实时可视化执行过程。它提供了交互式的界面，让你可以自己控制演示的速度和步骤，更好地探索数据结构和算法的细节。
+                    </li>
 
-   <li> 动态规划 </li>
-   <ul>
-    <li> <a href = "DPFib.html">计算第n个斐波那契数</a></li>
-    <li> <a href = "DPChange.html">找零问题</a></li>
-    <li> <a href = "DPLCS.html">最长公共子序列</a></li>
-   </ul>
-
-   <li> 堆及类似堆的数据结构 </li>
-   <ul>
-    <li> <a href = "Heap.html">堆</a> </li>
-    <li> <a href = "BinomialQueue.html">二项队列</a> </li>
-    <li> <a href = "FibonacciHeap.html">斐波那契堆</a> </li>
-    <li> <a href = "LeftistHeap.html">左式堆</a> </li>
-    <li> <a href = "SkewHeap.html">斜堆</a> </li>
-   </ul>
-
-   <li> 几何算法 </li>
-   <ul>
-    <li> <a href = "RotateScale2D.html">2D旋转和缩放矩阵</a> </li>
-    <li> <a href = "RotateTranslate2D.html">2D旋转和平移矩阵</a> </li>
-    <li> <a href = "ChangingCoordinates2D.html">2D坐标系统变换</a> </li>
-    <li> <a href = "RotateScale3D.html">3D旋转和缩放矩阵</a> </li>
-    <li> <a href = "ChangingCoordinates3D.html">3D坐标系统变换</a> </li>
-   </ul>
-
-   <li> 其他 </li>
-   <ul>
-    <li> <a href = "DisjointSets.html">不相交集合</a> </li>
-    <li> 哈夫曼编码（可在 <a href = "java/visualization.html">Java</a> 版本中使用） </li>
-   </ul>
-
-  </ul>
-
- </div>
- <div class="footer">版权所有 2011 <a href = "http://www.cs.usfca.edu/galles">大卫·加勒斯 </a> </div>
+                </ul>
+            </li>
+    </div>
+    <div class="footer">版权所有 2011 <a href="http://www.cs.usfca.edu/galles">大卫·加勒斯 </a></div>
 
 </div>
 
