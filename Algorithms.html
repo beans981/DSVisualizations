@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <title> 数据结构可视化 </title>
     <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+        /* 只对 .content 下的第一级 ul 元素生效 */
+        .content > ul {
+            /* 去除列表默认样式 */
+            list-style-type: none;
+            padding: 0;
+            /* 初始列数为 1 */
+            column-count: 1;
+        }
+
+        @media (min-width: 600px) {
+            /* 当屏幕宽度大于等于 600px 时，列数变为 2 */
+            .content > ul {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 900px) {
+            /* 当屏幕宽度大于等于 900px 时，列数变为 3 */
+            .content > ul {
+                column-count: 3;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -11,6 +35,462 @@
     <div class="header"><h1>数据结构可视化</h1></div>
 
     <div class="content">
+        <div>清华大学</div>
+        <ul>
+            <li><a href="swf1/1-4 算法和算法分析 冒泡排序.html">1-4 算法和算法分析 冒泡排序</a></li>
+            <li><a href="swf1/2-2-1顺序表的查找.html">2-2-1顺序表的查找</a></li>
+            <li><a href="swf1/2-2-2顺序表的插入演示.html">2-2-2顺序表的插入演示</a></li>
+            <li><a href="swf1/2-2-3顺序表的插入算法.html">2-2-3顺序表的插入算法</a></li>
+            <li><a href="swf1/2-2-4顺序表的删除演示.html">2-2-4顺序表的删除演示</a></li>
+            <li><a href="swf1/2-2-5顺序表的删除算法.html">2-2-5顺序表的删除算法</a></li>
+            <li><a href="swf1/2-2-6.html">2-2-6</a></li>
+            <li><a href="swf1/2-2-7.html">2-2-7</a></li>
+            <li><a href="swf1/2-2-8.html">2-2-8</a></li>
+            <li><a href="swf1/2-2-9.html">2-2-9</a></li>
+            <li><a href="swf1/2-3-1.1单链表删除节点.html">2-3-1.1单链表删除节点</a></li>
+            <li><a href="swf1/2-3-1.2单链表插入节点.html">2-3-1.2单链表插入节点</a></li>
+            <li><a href="swf1/2-3-1单链表getElem.html">2-3-1单链表getElem</a></li>
+            <li><a href="swf1/2-3-2单链表头插法.html">2-3-2单链表头插法</a></li>
+            <li><a href="swf1/2-3-3.html">2-3-3</a></li>
+            <li><a href="swf1/2-3-4.html">2-3-4</a></li>
+            <li><a href="swf1/2-3-5带头结点的双向循环链表.html">2-3-5带头结点的双向循环链表</a></li>
+            <li><a href="swf1/2-3-6双向链表的插入.html">2-3-6双向链表的插入</a></li>
+            <li><a href="swf1/2-3-7双向链表的删除.html">2-3-7双向链表的删除</a></li>
+            <li><a href="swf1/2-3-8.html">2-3-8</a></li>
+            <li><a href="swf1/2-3-9两个有序链表的连接.html">2-3-9两个有序链表的连接</a></li>
+            <li><a href="swf1/3-2-1栈的应用举例-进制转换.html">3-2-1栈的应用举例-进制转换</a></li>
+            <li><a href="swf1/3-3-1栈的应用举例-走迷宫-有解.html">3-3-1栈的应用举例-走迷宫-有解</a></li>
+            <li><a href="swf1/3-3-2栈的应用举例-走迷宫-无解.html">3-3-2栈的应用举例-走迷宫-无解</a></li>
+            <li><a href="swf1/3-3-4后缀式.html">3-3-4后缀式</a></li>
+            <li><a href="swf1/3-3-5后缀式.html">3-3-5后缀式</a></li>
+            <li><a href="swf1/3-3-6后缀式.html">3-3-6后缀式</a></li>
+            <li><a href="swf1/3-3-7后缀式.html">3-3-7后缀式</a></li>
+            <li><a href="swf1/3-3-9栈的应用举例-汉诺塔.html">3-3-9栈的应用举例-汉诺塔</a></li>
+            <li><a href="swf1/3-3-10链队列.html">3-3-10链队列</a></li>
+            <li><a href="swf1/3-3-11链队列-入队.html">3-3-11链队列-入队</a></li>
+            <li><a href="swf1/3-3-12-1链队列出队.html">3-3-12-1链队列出队</a></li>
+            <li><a href="swf1/3-3-12-2链队列出队-队列空.html">3-3-12-2链队列出队-队列空</a></li>
+            <li><a href="swf1/3-3-13循环队列.html">3-3-13循环队列</a></li>
+            <li><a href="swf1/3-4-1杨辉三角.html">3-4-1杨辉三角</a></li>
+            <li><a href="swf1/3-4-2离散事件模拟.html">3-4-2离散事件模拟</a></li>
+            <li><a href="swf1/4-1-1串的定位操作.html">4-1-1串的定位操作</a></li>
+            <li><a href="swf1/4-1-2串的替换.html">4-1-2串的替换</a></li>
+            <li><a href="swf1/4-3-1串的简单匹配.html">4-3-1串的简单匹配</a></li>
+            <li><a href="swf1/4-3-2串的模式匹配1.html">4-3-2串的模式匹配1</a></li>
+            <li><a href="swf1/4-3-3串的模式匹配2.html">4-3-3串的模式匹配2</a></li>
+            <li><a href="swf1/4-3-4-1串的模式匹配next.html">4-3-4-1串的模式匹配next</a></li>
+            <li><a href="swf1/4-3-4-2串的模式匹配kmp算法.html">4-3-4-2串的模式匹配kmp算法</a></li>
+            <li><a href="swf1/5-2-1广义表.html">5-2-1广义表</a></li>
+            <li><a href="swf1/5-3-1第一个子表和广义表的关系.html">5-3-1第一个子表和广义表的关系</a></li>
+            <li><a href="swf1/5-3-2相邻两个子表之间的关系.html">5-3-2相邻两个子表之间的关系</a></li>
+            <li><a href="swf1/5-3-3广义表.html">5-3-3广义表</a></li>
+            <li><a href="swf1/5-3 稀疏矩阵的转置.html">5-3 稀疏矩阵的转置</a></li>
+            <li><a href="swf1/5_1_1矩阵按行存储.html">5_1_1矩阵按行存储</a></li>
+            <li><a href="swf1/5_1_2矩阵按列存储.html">5_1_2矩阵按列存储</a></li>
+            <li><a href="swf1/6-4-1树的遍历.html">6-4-1树的遍历</a></li>
+            <li><a href="swf1/6-4-2-1二叉树的先序遍历.html">6-4-2-1二叉树的先序遍历</a></li>
+            <li><a href="swf1/6-4-2-2二叉树的中序遍历.html">6-4-2-2二叉树的中序遍历</a></li>
+            <li><a href="swf1/6-4-2-3二叉树的后序遍历.html">6-4-2-3二叉树的后序遍历</a></li>
+            <li><a href="swf1/6-4-3先序遍历.html">6-4-3先序遍历</a></li>
+            <li><a href="swf1/6-4-4复制二叉树.html">6-4-4复制二叉树</a></li>
+            <li><a href="swf1/6-4-5复制二叉树.html">6-4-5复制二叉树</a></li>
+            <li><a href="swf1/6-4-6先序次序建立二叉树.html">6-4-6先序次序建立二叉树</a></li>
+            <li><a href="swf1/6-4-7表达式二叉树.html">6-4-7表达式二叉树</a></li>
+            <li><a href="swf1/6-5-1中序线索二叉树的遍历.html">6-5-1中序线索二叉树的遍历</a></li>
+            <li><a href="swf1/6-5-2二叉树的中序线索化.html">6-5-2二叉树的中序线索化</a></li>
+            <li><a href="swf1/6-6-1森林转二叉树.html">6-6-1森林转二叉树</a></li>
+            <li><a href="swf1/6-6-2二叉树转换森林.html">6-6-2二叉树转换森林</a></li>
+            <li><a href="swf1/6-7-1树的先根遍历.html">6-7-1树的先根遍历</a></li>
+            <li><a href="swf1/6-7-2树的后根遍历.html">6-7-2树的后根遍历</a></li>
+            <li><a href="swf1/6-7-3树的先根遍历过程.html">6-7-3树的先根遍历过程</a></li>
+            <li><a href="swf1/6-7-4树的后根遍历过程.html">6-7-4树的后根遍历过程</a></li>
+            <li><a href="swf1/6-7-5先序遍历森林.html">6-7-5先序遍历森林</a></li>
+            <li><a href="swf1/6-7-6中序遍历森林.html">6-7-6中序遍历森林</a></li>
+            <li><a href="swf1/6-7-8孩子兄弟表示法建立树.html">6-7-8孩子兄弟表示法建立树</a></li>
+            <li><a href="swf1/6-8-1哈夫曼树.html">6-8-1哈夫曼树</a></li>
+            <li><a href="swf1/7-2-1十字链表.html">7-2-1十字链表</a></li>
+            <li><a href="swf1/7-2-2邻接多重表.html">7-2-2邻接多重表</a></li>
+            <li><a href="swf1/7-3-2图的深度优先搜索.html">7-3-2图的深度优先搜索</a></li>
+            <li><a href="swf1/7-3-3图的广度优先搜索.html">7-3-3图的广度优先搜索</a></li>
+            <li><a href="swf1/7-3-4图的广度优先搜索-树的层次遍历.html">7-3-4图的广度优先搜索-树的层次遍历</a></li>
+            <li><a href="swf1/7-4-1克鲁斯卡尔.html">7-4-1克鲁斯卡尔</a></li>
+            <li><a href="swf1/7-4-2普里姆.html">7-4-2普里姆</a></li>
+            <li><a href="swf1/7-4-3普里姆-辅助数组.html">7-4-3普里姆-辅助数组</a></li>
+            <li><a href="swf1/7-5-0迪杰斯特拉.html">7-5-0迪杰斯特拉</a></li>
+            <li><a href="swf1/7-5-1弗洛伊德.html">7-5-1弗洛伊德</a></li>
+            <li><a href="swf1/7-6-0拓扑排序.html">7-6-0拓扑排序</a></li>
+            <li><a href="swf1/7-6-1拓扑排序-有环.html">7-6-1拓扑排序-有环</a></li>
+            <li><a href="swf1/7-7-1关键路径.html">7-7-1关键路径</a></li>
+            <li><a href="swf1/9-2-1B-树.html">9-2-1B-树</a></li>
+            <li><a href="swf1/9-2-1顺序查找.html">9-2-1顺序查找</a></li>
+            <li><a href="swf1/9-2-2折半查找.html">9-2-2折半查找</a></li>
+            <li><a href="swf1/9-2-3折半查找查找长度.html">9-2-3折半查找查找长度</a></li>
+            <li><a href="swf1/9-2-4分块有序表.html">9-2-4分块有序表</a></li>
+            <li><a href="swf1/9-2-5静态树表的查找.html">9-2-5静态树表的查找</a></li>
+            <li><a href="swf1/9-3-1二叉排序树.html">9-3-1二叉排序树</a></li>
+            <li><a href="swf1/9-3-2二叉排序树查找.html">9-3-2二叉排序树查找</a></li>
+            <li><a href="swf1/9-3-3二叉排序树建立.html">9-3-3二叉排序树建立</a></li>
+            <li><a href="swf1/9-3-4二叉排序树删除.html">9-3-4二叉排序树删除</a></li>
+            <li><a href="swf1/9-3-5二叉排序树删除.html">9-3-5二叉排序树删除</a></li>
+            <li><a href="swf1/9-3-6二叉排序树删除.html">9-3-6二叉排序树删除</a></li>
+            <li><a href="swf1/9-3-7二叉排序树ASL.html">9-3-7二叉排序树ASL</a></li>
+            <li><a href="swf1/9-3-8平衡二叉树的旋转.html">9-3-8平衡二叉树的旋转</a></li>
+            <li><a href="swf1/9-4-1哈希表-线性探测再散列.html">9-4-1哈希表-线性探测再散列</a></li>
+            <li><a href="swf1/9-4-2哈希表-链地址法.html">9-4-2哈希表-链地址法</a></li>
+            <li><a href="swf1/9-4-3哈希表-解决冲突.html">9-4-3哈希表-解决冲突</a></li>
+            <li><a href="swf1/10-1-1插入排序.html">10-1-1插入排序</a></li>
+            <li><a href="swf1/10-2-2直接插入排序.html">10-2-2直接插入排序</a></li>
+            <li><a href="swf1/10-2-3折半插入排序.html">10-2-3折半插入排序</a></li>
+            <li><a href="swf1/10-2-4-1直接插入排序.html">10-2-4-1直接插入排序</a></li>
+            <li><a href="swf1/10-2-4表插入排序.html">10-2-4表插入排序</a></li>
+            <li><a href="swf1/10-2-5希尔排序.html">10-2-5希尔排序</a></li>
+            <li><a href="swf1/10-3-1起泡排序.html">10-3-1起泡排序</a></li>
+            <li><a href="swf1/10-3-2起泡排序.html">10-3-2起泡排序</a></li>
+            <li><a href="swf1/10-3-4快速排序.html">10-3-4快速排序</a></li>
+            <li><a href="swf1/10-4-2堆排序大顶堆.html">10-4-2堆排序大顶堆</a></li>
+            <li><a href="swf1/10-4-3堆排序大顶堆.html">10-4-3堆排序大顶堆</a></li>
+            <li><a href="swf1/10-4-4堆排序建立堆.html">10-4-4堆排序建立堆</a></li>
+            <li><a href="swf1/10-5-2归并排序.html">10-5-2归并排序</a></li>
+            <li><a href="swf1/10-6-1多关键字排序.html">10-6-1多关键字排序</a></li>
+            <li><a href="swf1/10-6-2分配收集.html">10-6-2分配收集</a></li>
+            <li><a href="swf1/10-6-3分配收集2.html">10-6-3分配收集2</a></li>
+            <li><a href="swf1/10-6-4计数排序.html">10-6-4计数排序</a></li>
+        </ul>
+        <div>版本2</div>
+        <ul>
+            <li><a href="swf2/2.1 线性表的类型定义.html">2.1 线性表的类型定义</a></li>
+            <li><a href="swf2/2.3 线性表的链式表示和实现 单链表到循环链表的转化.html">2.3 线性表的链式表示和实现 单链表到循环链表的转化</a></li>
+            <li><a href="swf2/2.3 线性表的链式表示和实现 单链表的插入.html">2.3 线性表的链式表示和实现 单链表的插入</a></li>
+            <li><a href="swf2/2.3 线性表的链式表示和实现 双向循环链表中右边插入节点.html">2.3 线性表的链式表示和实现 双向循环链表中右边插入节点</a></li>
+            <li><a href="swf2/2.3 线性表的链式表示和实现 双向循环链表中左边插入节点.html">2.3 线性表的链式表示和实现 双向循环链表中左边插入节点</a></li>
+            <li><a href="swf2/2.3 线性表的链式表示和实现 表头插入节点.html">2.3 线性表的链式表示和实现 表头插入节点</a></li>
+            <li><a href="swf2/2.3 线性表的链式表示和实现 表尾插入节点.html">2.3 线性表的链式表示和实现 表尾插入节点</a></li>
+            <li><a href="swf2/2.3 线性表的链式表示和实现 遍历链表.html">2.3 线性表的链式表示和实现 遍历链表</a></li>
+            <li><a href="swf2/2.3 线性表的链式表示和实现 链表的连接.html">2.3 线性表的链式表示和实现 链表的连接</a></li>
+            <li><a href="swf2/3.1 栈 栈的举例 弹夹.html">3.1 栈 栈的举例 弹夹</a></li>
+            <li><a href="swf2/3.1 栈 栈的入栈操作1.html">3.1 栈 栈的入栈操作1</a></li>
+            <li><a href="swf2/3.1 栈 栈的入栈操作2.html">3.1 栈 栈的入栈操作2</a></li>
+            <li><a href="swf2/3.2 栈的应有和举例汉诺塔1.html">3.2 栈的应有和举例汉诺塔1</a></li>
+            <li><a href="swf2/3.2 栈的应有和举例汉诺塔2.html">3.2 栈的应有和举例汉诺塔2</a></li>
+            <li><a href="swf2/3.4 队列 数组型队列删除队首元素.html">3.4 队列 数组型队列删除队首元素</a></li>
+            <li><a href="swf2/3.4 队列 数组型队列删除队首元素2.html">3.4 队列 数组型队列删除队首元素2</a></li>
+            <li><a href="swf2/3.4 队列 环形枪梭.html">3.4 队列 环形枪梭</a></li>
+            <li><a href="swf2/3.4 队列 环形队列的插入.html">3.4 队列 环形队列的插入</a></li>
+            <li><a href="swf2/6.2.2 二叉树的性质 高度为k的二叉树至多.html">6.2.2 二叉树的性质 高度为k的二叉树至多</a></li>
+            <li><a href="swf2/6.3.1 遍历二叉树 中序遍历.html">6.3.1 遍历二叉树 中序遍历</a></li>
+            <li><a href="swf2/6.3.1 遍历二叉树 二叉树的复制.html">6.3.1 遍历二叉树 二叉树的复制</a></li>
+            <li><a href="swf2/6.3.2 线索二叉树 插入.html">6.3.2 线索二叉树 插入</a></li>
+            <li><a href="swf2/6.3.2 线索二叉树 插入2.html">6.3.2 线索二叉树 插入2</a></li>
+            <li><a href="swf2/6.3.2 线索二叉树 搜索中根序列前驱.html">6.3.2 线索二叉树 搜索中根序列前驱</a></li>
+            <li><a href="swf2/6.3.2 线索二叉树 搜索中根序列头节点.html">6.3.2 线索二叉树 搜索中根序列头节点</a></li>
+            <li><a href="swf2/6.4.1 树的存储结构 孩子兄弟 删除子树.html">6.4.1 树的存储结构 孩子兄弟 删除子树</a></li>
+            <li><a href="swf2/6.4.1 树的存储结构 孩子兄弟 删除子树2.html">6.4.1 树的存储结构 孩子兄弟 删除子树2</a></li>
+            <li><a href="swf2/6.4.1 树的存储结构 孩子兄弟 删除子树3.html">6.4.1 树的存储结构 孩子兄弟 删除子树3</a></li>
+            <li><a href="swf2/6.4.1 树的存储结构 孩子兄弟 找左兄弟.html">6.4.1 树的存储结构 孩子兄弟 找左兄弟</a></li>
+            <li><a href="swf2/6.4.1 树的存储结构 孩子兄弟 查找节点.html">6.4.1 树的存储结构 孩子兄弟 查找节点</a></li>
+            <li><a href="swf2/6.4.2 森林与二叉树的转换.html">6.4.2 森林与二叉树的转换</a></li>
+            <li><a href="swf2/6.4.3 树和森林的遍历 先根序列和度 树的建立.html">6.4.3 树和森林的遍历 先根序列和度 树的建立</a></li>
+            <li><a href="swf2/6.4.3 树和森林的遍历 树中搜索下一个兄弟节点.html">6.4.3 树和森林的遍历 树中搜索下一个兄弟节点</a></li>
+            <li><a href="swf2/6.4.3 树和森林的遍历 树中搜索大儿子节点.html">6.4.3 树和森林的遍历 树中搜索大儿子节点</a></li>
+            <li><a href="swf2/6.4.3 树和森林的遍历 迭代实现树的先根遍历.html">6.4.3 树和森林的遍历 迭代实现树的先根遍历</a></li>
+            <li><a href="swf2/6.4.3 树和森林的遍历 递归实现先根遍历树.html">6.4.3 树和森林的遍历 递归实现先根遍历树</a></li>
+            <li><a href="swf2/6.6.1 最优二叉树 赫夫曼树.html">6.6.1 最优二叉树 赫夫曼树</a></li>
+            <li><a href="swf2/6.6 赫夫曼树及其应用.html">6.6 赫夫曼树及其应用</a></li>
+            <li><a href="swf2/7.2.1 数组表示法.html">7.2.1 数组表示法</a></li>
+            <li><a href="swf2/7.2.1 数组表示法2.html">7.2.1 数组表示法2</a></li>
+            <li><a href="swf2/7.2.2 邻接表.html">7.2.2 邻接表</a></li>
+            <li><a href="swf2/7.2.2 邻接表2.html">7.2.2 邻接表2</a></li>
+            <li><a href="swf2/7.3.1 深度优先搜索.html">7.3.1 深度优先搜索</a></li>
+            <li><a href="swf2/7.3.1 深度优先搜索2.html">7.3.1 深度优先搜索2</a></li>
+            <li><a href="swf2/7.3.2 广度优先搜索.html">7.3.2 广度优先搜索</a></li>
+            <li><a href="swf2/7.4.3 最小生成树.html">7.4.3 最小生成树</a></li>
+            <li><a href="swf2/7.4.3 最小生成树 克鲁斯卡尔.html">7.4.3 最小生成树 克鲁斯卡尔</a></li>
+            <li><a href="swf2/7.5.1 拓扑排序.html">7.5.1 拓扑排序</a></li>
+            <li><a href="swf2/7.6.2 每一对顶点之间的最短路径.html">7.6.2 每一对顶点之间的最短路径</a></li>
+            <li><a href="swf2/9.1.2 有序表的查找 折半查找.html">9.1.2 有序表的查找 折半查找</a></li>
+            <li><a href="swf2/9.1.2 有序表的查找 折半查找递归.html">9.1.2 有序表的查找 折半查找递归</a></li>
+            <li><a href="swf2/9.1.2 有序表的查找 顺序查找.html">9.1.2 有序表的查找 顺序查找</a></li>
+            <li><a href="swf2/9.1.2 有序表的查找判定树.html">9.1.2 有序表的查找判定树</a></li>
+            <li><a href="swf2/9.3 哈希表.html">9.3 哈希表</a></li>
+            <li><a href="swf2/10.2.1 直接插入排序.html">10.2.1 直接插入排序</a></li>
+            <li><a href="swf2/10.3 交换排序 冒泡排序.html">10.3 交换排序 冒泡排序</a></li>
+            <li><a href="swf2/10.3 快速排序.html">10.3 快速排序</a></li>
+            <li><a href="swf2/10.4.3 堆排序1.html">10.4.3 堆排序1</a></li>
+            <li><a href="swf2/10.4.3 堆排序2.html">10.4.3 堆排序2</a></li>
+            <li><a href="swf2/10.4.3 堆排序 删除.html">10.4.3 堆排序 删除</a></li>
+            <li><a href="swf2/10.4.3 堆排序 插入.html">10.4.3 堆排序 插入</a></li>
+            <li><a href="swf2/10.5 归并排序.html">10.5 归并排序</a></li>
+            <li><a href="swf2/10.5 归并排序2.html">10.5 归并排序2</a></li>
+            <li><a href="swf2/第11章 外部排序.html">第11章 外部排序</a></li>
+        </ul>
+        <div>bobo</div>
+        <ul>
+            <li><a href="swf3/1顺序表插入.html">1顺序表插入</a></li>
+            <li><a href="swf3/1顺序表的地址计算.html">1顺序表的地址计算</a></li>
+            <li><a href="swf3/1顺序表的插入.html">1顺序表的插入</a></li>
+            <li><a href="swf3/1顺序表的插入算法.html">1顺序表的插入算法</a></li>
+            <li><a href="swf3/2顺序表删除.html">2顺序表删除</a></li>
+            <li><a href="swf3/2顺序表的删除.html">2顺序表的删除</a></li>
+            <li><a href="swf3/2顺序表的删除运算.html">2顺序表的删除运算</a></li>
+            <li><a href="swf3/3单链表结点插入.html">3单链表结点插入</a></li>
+            <li><a href="swf3/3单链表结点的插入.html">3单链表结点的插入</a></li>
+            <li><a href="swf3/4单链表结点删除.html">4单链表结点删除</a></li>
+            <li><a href="swf3/4单链表结点的删除.html">4单链表结点的删除</a></li>
+            <li><a href="swf3/5头插法建单链表.html">5头插法建单链表</a></li>
+            <li><a href="swf3/6尾插法建表.html">6尾插法建表</a></li>
+            <li><a href="swf3/7顺序栈.html">7顺序栈</a></li>
+            <li><a href="swf3/7顺序栈（4个存储空间）.html">7顺序栈（4个存储空间）</a></li>
+            <li><a href="swf3/8顺序栈演示.html">8顺序栈演示</a></li>
+            <li><a href="swf3/8顺序栈（8个存储空间）.html">8顺序栈（8个存储空间）</a></li>
+            <li><a href="swf3/9栈与递归.html">9栈与递归</a></li>
+            <li><a href="swf3/10顺序队列操作.html">10顺序队列操作</a></li>
+            <li><a href="swf3/10顺序队列操作演示.html">10顺序队列操作演示</a></li>
+            <li><a href="swf3/11循环队列操作演示.html">11循环队列操作演示</a></li>
+            <li><a href="swf3/11循环队列操作演示 (2).html">11循环队列操作演示 (2)</a></li>
+            <li><a href="swf3/12串的顺序存储.html">12串的顺序存储</a></li>
+            <li><a href="swf3/13朴素串匹配算法过程示意.html">13朴素串匹配算法过程示意</a></li>
+            <li><a href="swf3/14三元组表的转置.html">14三元组表的转置</a></li>
+            <li><a href="swf3/15二叉树的建立.html">15二叉树的建立</a></li>
+            <li><a href="swf3/16中序线索化二叉树.html">16中序线索化二叉树</a></li>
+            <li><a href="swf3/17寻找中序线索化二叉树指定结点的后继.html">17寻找中序线索化二叉树指定结点的后继</a></li>
+            <li><a href="swf3/18寻找中序线索化二叉树指定结点的前驱.html">18寻找中序线索化二叉树指定结点的前驱</a></li>
+            <li><a href="swf3/19树、森林和二叉树的转换.html">19树、森林和二叉树的转换</a></li>
+            <li><a href="swf3/20构造哈夫曼树的算法模拟.html">20构造哈夫曼树的算法模拟</a></li>
+            <li><a href="swf3/21构造哈夫曼树的过程.html">21构造哈夫曼树的过程</a></li>
+            <li><a href="swf3/21构造哈夫曼树过程.html">21构造哈夫曼树过程</a></li>
+            <li><a href="swf3/22图的深度优先遍历.html">22图的深度优先遍历</a></li>
+            <li><a href="swf3/23邻接表表示的图的广度优先遍历.html">23邻接表表示的图的广度优先遍历</a></li>
+            <li><a href="swf3/24邻接表表示的图的深度优先遍历.html">24邻接表表示的图的深度优先遍历</a></li>
+            <li><a href="swf3/25克鲁斯卡尔算法构造最小生成树.html">25克鲁斯卡尔算法构造最小生成树</a></li>
+            <li><a href="swf3/25拓扑排序.html">25拓扑排序</a></li>
+            <li><a href="swf3/25普里姆.html">25普里姆</a></li>
+            <li><a href="swf3/26弗洛伊德.html">26弗洛伊德</a></li>
+            <li><a href="swf3/26最短路径.html">26最短路径</a></li>
+            <li><a href="swf3/27顺序查找.html">27顺序查找</a></li>
+            <li><a href="swf3/28.html">28</a></li>
+            <li><a href="swf3/28二分查找.html">28二分查找</a></li>
+            <li><a href="swf3/28二分法查找.html">28二分法查找</a></li>
+            <li><a href="swf3/29分块查找.html">29分块查找</a></li>
+            <li><a href="swf3/30二叉排序树的生成.html">30二叉排序树的生成</a></li>
+            <li><a href="swf3/31二叉排序树的删除.html">31二叉排序树的删除</a></li>
+            <li><a href="swf3/32B树的删除.html">32B树的删除</a></li>
+            <li><a href="swf3/33B树的生长过程.html">33B树的生长过程</a></li>
+            <li><a href="swf3/34开放定址法建立散列表.html">34开放定址法建立散列表</a></li>
+            <li><a href="swf3/35拉链法创建散列表.html">35拉链法创建散列表</a></li>
+            <li><a href="swf3/36插入排序.html">36插入排序</a></li>
+            <li><a href="swf3/36直接插入排序.html">36直接插入排序</a></li>
+            <li><a href="swf3/37冒泡排序.html">37冒泡排序</a></li>
+            <li><a href="swf3/37冒泡排序 (2).html">37冒泡排序 (2)</a></li>
+            <li><a href="swf3/38快速排序.html">38快速排序</a></li>
+            <li><a href="swf3/38快速排序 (2).html">38快速排序 (2)</a></li>
+            <li><a href="swf3/39直接选择排序.html">39直接选择排序</a></li>
+            <li><a href="swf3/39选择排序.html">39选择排序</a></li>
+            <li><a href="swf3/40堆排序.html">40堆排序</a></li>
+            <li><a href="swf3/41希尔排序.html">41希尔排序</a></li>
+            <li><a href="swf3/41希尔排序 (2).html">41希尔排序 (2)</a></li>
+            <li><a href="swf3/42归并排序.html">42归并排序</a></li>
+            <li><a href="swf3/43基数排序.html">43基数排序</a></li>
+            <li><a href="swf3/44桶式排序法.html">44桶式排序法</a></li>
+        </ul>
+        <div>福州大学</div>
+        <ul>
+            <li><a href="swf4/2.01-无序数组的插入.html">2.01-无序数组的插入</a></li>
+            <li><a href="swf4/2.02-无序数组的查找.html">2.02-无序数组的查找</a></li>
+            <li><a href="swf4/2.03-无序数组的删除.html">2.03-无序数组的删除</a></li>
+            <li><a href="swf4/2.04-有序数组的插入.html">2.04-有序数组的插入</a></li>
+            <li><a href="swf4/2.05-有序数组的查找.html">2.05-有序数组的查找</a></li>
+            <li><a href="swf4/2.06-有序数组的删除.html">2.06-有序数组的删除</a></li>
+            <li><a href="swf4/2.07-单链表的插入.html">2.07-单链表的插入</a></li>
+            <li><a href="swf4/2.08-单链表的查找.html">2.08-单链表的查找</a></li>
+            <li><a href="swf4/2.09-单链表的删除.html">2.09-单链表的删除</a></li>
+            <li><a href="swf4/2.10-无表头的表在游标表示下的插入.html">2.10-无表头的表在游标表示下的插入</a></li>
+            <li><a href="swf4/2.11-无表头的表在游标表示下的查找.html">2.11-无表头的表在游标表示下的查找</a></li>
+            <li><a href="swf4/2.12-无表头的表在游标表示下的删除.html">2.12-无表头的表在游标表示下的删除</a></li>
+            <li><a href="swf4/2.13-循环表的插入.html">2.13-循环表的插入</a></li>
+            <li><a href="swf4/2.14-循环表的查找.html">2.14-循环表的查找</a></li>
+            <li><a href="swf4/2.15-循环表的删除.html">2.15-循环表的删除</a></li>
+            <li><a href="swf4/2.16-双向链表的插入.html">2.16-双向链表的插入</a></li>
+            <li><a href="swf4/2.17-双向链表的查找.html">2.17-双向链表的查找</a></li>
+            <li><a href="swf4/2.18-双向链表的删除.html">2.18-双向链表的删除</a></li>
+            <li><a href="swf4/3.01-栈的数组表示.html">3.01-栈的数组表示</a></li>
+            <li><a href="swf4/3.02-栈的链表表示.html">3.02-栈的链表表示</a></li>
+            <li><a href="swf4/3.03-栈的操作.html">3.03-栈的操作</a></li>
+            <li><a href="swf4/4.01-用循环数组实现队列.html">4.01-用循环数组实现队列</a></li>
+            <li><a href="swf4/4.02-循环数组实现I下队列的空与满的区分.html">4.02-循环数组实现I下队列的空与满的区分</a></li>
+            <li><a href="swf4/4.03-循环数组实现II下队列的空与满的区分.html">4.03-循环数组实现II下队列的空与满的区分</a></li>
+            <li><a href="swf4/4.04-循环数组实现III下队列的空与满的区分.html">4.04-循环数组实现III下队列的空与满的区分</a></li>
+            <li><a href="swf4/4.05-循环数组实现I下队列的删除运算.html">4.05-循环数组实现I下队列的删除运算</a></li>
+            <li><a href="swf4/4.06-循环数组实现II下队列的插入运算.html">4.06-循环数组实现II下队列的插入运算</a></li>
+            <li><a href="swf4/4.07-用链表表示的队列的插入运算.html">4.07-用链表表示的队列的插入运算</a></li>
+            <li><a href="swf4/4.08-用链表表示的队列的删除运算.html">4.08-用链表表示的队列的删除运算</a></li>
+            <li><a href="swf4/4.09-用链表表示的队列.html">4.09-用链表表示的队列</a></li>
+            <li><a href="swf4/5.01-模式匹配的KMP算法.html">5.01-模式匹配的KMP算法</a></li>
+            <li><a href="swf4/5.02-前缀函数的计算过程.html">5.02-前缀函数的计算过程</a></li>
+            <li><a href="swf4/5.03-朴素的模式匹配算法.html">5.03-朴素的模式匹配算法</a></li>
+            <li><a href="swf4/6.01-最坏情况下求第k小元素线性时间选择算法.html">6.01-最坏情况下求第k小元素线性时间选择算法</a></li>
+            <li><a href="swf4/6.02-冒泡排序.html">6.02-冒泡排序</a></li>
+            <li><a href="swf4/6.03-选择排序.html">6.03-选择排序</a></li>
+            <li><a href="swf4/6.04-快速排序.html">6.04-快速排序</a></li>
+            <li><a href="swf4/6.05-随机快速排序.html">6.05-随机快速排序</a></li>
+            <li><a href="swf4/6.06-堆排序.html">6.06-堆排序</a></li>
+            <li><a href="swf4/6.07-计数排序.html">6.07-计数排序</a></li>
+            <li><a href="swf4/6.08-桶排序.html">6.08-桶排序</a></li>
+            <li><a href="swf4/6.09-基数排序.html">6.09-基数排序</a></li>
+            <li><a href="swf4/6.10-希尔排序.html">6.10-希尔排序</a></li>
+            <li><a href="swf4/6.11-合并排序.html">6.11-合并排序</a></li>
+            <li><a href="swf4/7.01-两棵不同的有序树.html">7.01-两棵不同的有序树</a></li>
+            <li><a href="swf4/7.02-二叉树的概念.html">7.02-二叉树的概念</a></li>
+            <li><a href="swf4/7.03-二叉树的前序遍历.html">7.03-二叉树的前序遍历</a></li>
+            <li><a href="swf4/7.04-二叉树的中序遍历.html">7.04-二叉树的中序遍历</a></li>
+            <li><a href="swf4/7.05-二叉树的后序遍历.html">7.05-二叉树的后序遍历</a></li>
+            <li><a href="swf4/7.06-有序树的前序遍历.html">7.06-有序树的前序遍历</a></li>
+            <li><a href="swf4/7.07-有序树的中序遍历.html">7.07-有序树的中序遍历</a></li>
+            <li><a href="swf4/7.08-有序树的后序遍历.html">7.08-有序树的后序遍历</a></li>
+            <li><a href="swf4/7.09-有序树的非递归前序遍历.html">7.09-有序树的非递归前序遍历</a></li>
+            <li><a href="swf4/7.10-中缀表达式向前缀和后缀表达式的转化.html">7.10-中缀表达式向前缀和后缀表达式的转化</a></li>
+            <li><a href="swf4/7.11-有序树父亲数组表示.html">7.11-有序树父亲数组表示</a></li>
+            <li><a href="swf4/7.12-有序树儿子链表表示.html">7.12-有序树儿子链表表示</a></li>
+            <li><a href="swf4/7.13-有序树的左儿子右兄弟表示.html">7.13-有序树的左儿子右兄弟表示</a></li>
+            <li><a href="swf4/7.14-二叉树的顺序存储表示.html">7.14-二叉树的顺序存储表示</a></li>
+            <li><a href="swf4/7.15-二叉树的顺序存储表示.html">7.15-二叉树的顺序存储表示</a></li>
+            <li><a href="swf4/7.16-二叉树的结点度表示.html">7.16-二叉树的结点度表示</a></li>
+            <li><a href="swf4/7.17-二叉树的链式存储表示.html">7.17-二叉树的链式存储表示</a></li>
+            <li><a href="swf4/7.18-二叉树的中序线索化.html">7.18-二叉树的中序线索化</a></li>
+            <li><a href="swf4/8.01-无向带权图邻接矩阵表示法.html">8.01-无向带权图邻接矩阵表示法</a></li>
+            <li><a href="swf4/8.02-有向图邻接矩阵表示法.html">8.02-有向图邻接矩阵表示法</a></li>
+            <li><a href="swf4/8.03-无向图邻接表表示法.html">8.03-无向图邻接表表示法</a></li>
+            <li><a href="swf4/8.04-有向图邻接表表示法.html">8.04-有向图邻接表表示法</a></li>
+            <li><a href="swf4/8.05-深度优先遍历.html">8.05-深度优先遍历</a></li>
+            <li><a href="swf4/8.06-无向图广度优先遍历算法.html">8.06-无向图广度优先遍历算法</a></li>
+            <li><a href="swf4/8.07-求有向图强连通分支.html">8.07-求有向图强连通分支</a></li>
+            <li><a href="swf4/8.08-求无向图的割点.html">8.08-求无向图的割点</a></li>
+            <li><a href="swf4/8.09-求最小生成树的Prim算法.html">8.09-求最小生成树的Prim算法</a></li>
+            <li><a href="swf4/8.10-求最小生成树的Kruskal算法.html">8.10-求最小生成树的Kruskal算法</a></li>
+            <li><a href="swf4/8.11-求单源最短路径Dijkstra算法.html">8.11-求单源最短路径Dijkstra算法</a></li>
+            <li><a href="swf4/8.12-求带权图所有顶点对最短路径的FLOYD算法.html">8.12-求带权图所有顶点对最短路径的FLOYD算法</a></li>
+            <li><a href="swf4/8.13-拓扑排序算法.html">8.13-拓扑排序算法</a></li>
+            <li><a href="swf4/9.01-闭散列表.html">9.01-闭散列表</a></li>
+            <li><a href="swf4/9.02-开散列表.html">9.02-开散列表</a></li>
+            <li><a href="swf4/9.03-二叉搜索树.html">9.03-二叉搜索树</a></li>
+            <li><a href="swf4/9.04-二叉搜索树的左右旋.html">9.04-二叉搜索树的左右旋</a></li>
+            <li><a href="swf4/9.05-2－3树的插入.html">9.05-2－3树的插入</a></li>
+            <li><a href="swf4/9.06-2－3树的删除.html">9.06-2－3树的删除</a></li>
+            <li><a href="swf4/9.07-平衡二叉树-AVL树的插入.html">9.07-平衡二叉树-AVL树的插入</a></li>
+            <li><a href="swf4/9.08-红黑树的插入.html">9.08-红黑树的插入</a></li>
+            <li><a href="swf4/9.09-红黑树的删除.html">9.09-红黑树的删除</a></li>
+            <li><a href="swf4/9.10-（最小化）堆.html">9.10-（最小化）堆</a></li>
+            <li><a href="swf4/9.11-（最小化）优先级树.html">9.11-（最小化）优先级树</a></li>
+            <li><a href="swf4/9.12-堆的插入.html">9.12-堆的插入</a></li>
+            <li><a href="swf4/9.16-左偏高树的概念.html">9.16-左偏高树的概念</a></li>
+            <li><a href="swf4/9.17-左偏重树的概念.html">9.17-左偏重树的概念</a></li>
+            <li><a href="swf4/9.18-左偏高树的插入运算.html">9.18-左偏高树的插入运算</a></li>
+            <li><a href="swf4/9.19-左偏高树的合并运算.html">9.19-左偏高树的合并运算</a></li>
+            <li><a href="swf4/9.20-左偏高树的删除最小节点运算.html">9.20-左偏高树的删除最小节点运算</a></li>
+        </ul>
+        <div>北京林业大学 -需要部署到服务器，或者下载<a href="swf5/flashplayer_14_sa_debug.exe">Flash Player</a>，然后在swf5目录中打开</div>
+        <ul>
+            <li><a href="ruffle.html?file=swf5/2_1顺序表的初始化.swf">2_1顺序表的初始化.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_2顺序表的取值.swf">2_2顺序表的取值.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_3顺序表的查找.swf">2_3顺序表的查找.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_4顺序表的插入.swf">2_4顺序表的插入.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_5顺序表的删除.swf">2_5顺序表的删除.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_6单链表的初始化.swf">2_6单链表的初始化.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_7单链表的取值.swf">2_7单链表的取值.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_8单链表的按值查找.swf">2_8单链表的按值查找.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_9单链表的插入.swf">2_9单链表的插入.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_10单链表的删除.swf">2_10单链表的删除.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_11前插法创建单链表.swf">2_11前插法创建单链表.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_12后插法创建单链表.swf">2_12后插法创建单链表.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_13双向链表的插入.swf">2_13双向链表的插入.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_14双向链表的删除.swf">2_14双向链表的删除.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_15线性表的合并.swf">2_15线性表的合并.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_16顺序有序表的合并.swf">2_16顺序有序表的合并.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_17链式有序表的合并.swf">2_17链式有序表的合并.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_18多项式的创建.swf">2_18多项式的创建.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/2_19多项式的相加.swf">2_19多项式的相加.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_1顺序栈的初始化.swf">3_1顺序栈的初始化.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_2顺序栈的入栈.swf">3_2顺序栈的入栈.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_3顺序栈的出栈.swf">3_3顺序栈的出栈.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_4取顺序栈的栈顶元素.swf">3_4取顺序栈的栈顶元素.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_5链栈的初始化.swf">3_5链栈的初始化.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_6链栈的入栈.swf">3_6链栈的入栈.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_7链栈的出栈.swf">3_7链栈的出栈.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_8取链栈的栈顶元素.swf">3_8取链栈的栈顶元素.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_9递归输出链表.swf">3_9递归输出链表.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_10Hanoi塔问题的递归算法.swf">3_10Hanoi塔问题的递归算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_11 循环队列的初始化.swf">3_11 循环队列的初始化.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_12 求循环队列的长度.swf">3_12 求循环队列的长度.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_13 循环队列的入队.swf">3_13 循环队列的入队.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_14 循坏队列的出队.swf">3_14 循坏队列的出队.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_15 取循环队列的队头元素.swf">3_15 取循环队列的队头元素.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_16 链队的初始化.swf">3_16 链队的初始化.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_17 链队的入队.swf">3_17 链队的入队.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_18 链队的出队.swf">3_18 链队的出队.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_19 取链队的队头元素.swf">3_19 取链队的队头元素.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_20数制的转换.swf">3_20数制的转换.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_21括号的匹配.swf">3_21括号的匹配.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_22表达式求值.swf">3_22表达式求值.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/3_23 舞伴问题.swf">3_23 舞伴问题.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/4_1BF算法.swf">4_1BF算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/4_2KMP算法.swf">4_2KMP算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/4_3计算next函数值.swf">4_3计算next函数值.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/4_4计算next函数修正值.swf">4_4计算next函数修正值.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/4_5病毒感染检测.swf">4_5病毒感染检测.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_1中序遍历的递归算法.swf">5_1中序遍历的递归算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_2中序遍历的非递归算法.swf">5_2中序遍历的非递归算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_3先序遍历的顺序建立二叉链表.swf">5_3先序遍历的顺序建立二叉链表.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_4复制二叉树.swf">5_4复制二叉树.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_5计算二叉树的深度.swf">5_5计算二叉树的深度.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_6统计二叉树的结点个数.swf">5_6统计二叉树的结点个数.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_7以结点p为根的子树中序线索化.swf">5_7以结点p为根的子树中序线索化.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_8带头结点的二叉树中序线索化.swf">5_8带头结点的二叉树中序线索化.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_9遍历中序线索二叉树.swf">5_9遍历中序线索二叉树.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_10构造哈夫曼树.swf">5_10构造哈夫曼树.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_11根据哈夫曼求哈夫曼编码.swf">5_11根据哈夫曼求哈夫曼编码.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_12表达式树的创建.swf">5_12表达式树的创建.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/5_13表达式树的求值.swf">5_13表达式树的求值.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_1采用邻接矩阵表示法创建无向网.swf">6_1采用邻接矩阵表示法创建无向网.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_2采用邻接表表示法创建无向图.swf">6_2采用邻接表表示法创建无向图.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_3深度搜索遍历连通图.swf">6_3深度搜索遍历连通图.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_4深度优先搜索遍历非连通图.swf">6_4深度优先搜索遍历非连通图.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_5采用邻接矩阵表示图的深度优先搜索遍历.swf">6_5采用邻接矩阵表示图的深度优先搜索遍历.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_6采用邻接表表示图的深度优先搜索遍历.swf">6_6采用邻接表表示图的深度优先搜索遍历.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_7广度优先搜索遍历连通图.swf">6_7广度优先搜索遍历连通图.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_8普里姆算法.swf">6_8普里姆算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_9克鲁斯卡尔算法.swf">6_9克鲁斯卡尔算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_10迪杰斯特拉算法.swf">6_10迪杰斯特拉算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_11弗洛伊德算法.swf">6_11弗洛伊德算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_12拓扑排序.swf">6_12拓扑排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_13关键路径算法.swf">6_13关键路径算法.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/6_14六度空间.swf">6_14六度空间.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_1顺序查找.swf">7_1顺序查找.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_2设置监视哨的顺序查找.swf">7_2设置监视哨的顺序查找.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_3折半查找.swf">7_3折半查找.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_4二叉排序树的递归查找.swf">7_4二叉排序树的递归查找.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_5二叉排序树的插入.swf">7_5二叉排序树的插入.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_6二叉排序树的创建.swf">7_6二叉排序树的创建.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_7二叉树排序树的删除.swf">7_7二叉树排序树的删除.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_8B   树的查找.swf">7_8B 树的查找.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_9B   树的插入.swf">7_9B 树的插入.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/7_10散列表的查找.swf">7_10散列表的查找.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_1直接插入排序.swf">8_1直接插入排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_2折半插入排序.swf">8_2折半插入排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_3希尔排序.swf">8_3希尔排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_4冒泡排序.swf">8_4冒泡排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_5快速排序.swf">8_5快速排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_6简单选择排序.swf">8_6简单选择排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_7筛选法调整堆.swf">8_7筛选法调整堆.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_8初建堆.swf">8_8初建堆.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_9堆排序.swf">8_9堆排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_10相邻两个有序子序列的归并.swf">8_10相邻两个有序子序列的归并.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_11归并排序.swf">8_11归并排序.swf</a></li>
+            <li><a href="ruffle.html?file=swf5/8_12基数排序.swf">8_12基数排序.swf</a></li>
+        </ul>
+        <div>
+            <a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">1. Data Structure Visualizations</a>
+            <br>
+            特点：此网站专注于数据结构和算法的可视化，提供了多种数据结构的动态演示，包括线性表、哈希表、堆等。它的可视化效果清晰，能够帮助你深入理解数据结构的内部工作原理。此外，网站还提供了算法复杂度分析的相关信息。本项目基于此网站修改。
+        </div>
         <ul>
             <li> 线性表</li>
             <ul>
@@ -18,9 +498,7 @@
                 <li><a href="LinkList.html">单链表</a></li>
                 <li><a href="https://visualgo.net/zh/array">顺序表（VisuAlgo）</a></li>
                 <li><a href="https://visualgo.net/zh/list">双向链表、双端队列（VisuAlgo）</a></li>
-
             </ul>
-
             <li> 栈和队列</li>
             <ul>
                 <li><a href="StackArray.html">栈：数组实现</a></li>
@@ -37,11 +515,9 @@
                 <li><a href="https://algorithm-visualizer.org/brute-force/lowest-common-ancestor">最近公共祖先
                     (Lowest Common Ancestor，,Algorithm Visualizer)</a></li>
                 <li><a href="BinaryTreeGraph/index.html">二叉树、二叉搜索树、堆</a></li>
-                <li> <a href="https://ishu9bansal.github.io/huffman/">哈夫曼编码</a></li>
-                <li> <a href="HuffMan/index.html/">哈夫曼树与编码</a></li>
-
+                <li><a href="https://ishu9bansal.github.io/huffman/">哈夫曼编码</a></li>
+                <li><a href="HuffMan/index.html/">哈夫曼树与编码</a></li>
             </ul>
-
             <li> 图算法</li>
             <ul>
                 <li><a href="https://visualgo.net/zh/graphds">图结构（VisuAlgo）</a></li>
@@ -119,272 +595,157 @@
                 <li><a href="RecReverse.html">字符串反转</a></li>
                 <li><a href="RecQueens.html">N皇后问题</a></li>
             </ul>
-            <li>数据结构演示网站
+        </ul>
+        <div><a href="https://algorithm-visualizer.org/">2. Algorithm Visualizer</a>
+            <br>
+            特点：这个网站不仅可以可视化常见的数据结构和算法，还支持用户自定义代码并实时可视化执行过程。它提供了交互式的界面，让你可以自己控制演示的速度和步骤，更好地探索数据结构和算法的细节。
+        </div>
+        <ul>
+            <li><a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">广度优先搜索(Breadth - First Search)</a></li>
+            <li><a href="https://algorithm-visualizer.org/brute-force/depth-first-search">深度优先搜索 (Depth - First Search)</a></li>
+            <li><a href="https://algorithm-visualizer.org/branch-and-bound/topological-sort">拓扑排序 (Topological Sort，分支限界法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/greedy/kruskals-minimum-spanning-tree">克鲁斯卡尔最小生成树算法 (Kruskal's Minimum Spanning Tree，贪心算法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/greedy/prims-minimum-spanning-tree">普里姆最小生成树算法 (Prim's Minimum Spanning Tree，贪心算法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/dynamic-programming/floyd-warshalls-shortest-path">弗洛伊德 - 沃肖尔最短路径 (Floyd - Warshall's Shortest Path，动态规划)</a></li>
+            <li><a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">二分搜索 (Binary Search，分支限界法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/branch-and-bound/binary-search-tree">二叉搜索树 (Binary Search Tree，分支限界法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/brute-force/bubble-sort">冒泡排序 (Bubble Sort，暴力法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/brute-force/insertion-sort">插入排序 (Insertion Sort，暴力法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/brute-force/selection-sort">选择排序 (Selection Sort，暴力法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">归并排序 (Merge Sort，分治法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">快速排序 (Quicksort，分治法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">桶排序 (Bucket Sort，分治法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">计数排序 (Counting Sort，分治法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">基数排序 (Radix Sort，分治法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/brute-force/heapsort">堆排序 (Heapsort，暴力法)</a></li>
+            <li><a href="https://algorithm-visualizer.org/brute-force/shellsort">希尔排序 (Shellsort，暴力法)</a></li>
+            <li><span>回溯法 (Backtracking)</span>
                 <ul>
-                    <li style="line-height: 2;">
-                        <a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">1. Data Structure
-                            Visualizations</a>
-                        <br>
-                        特点：此网站专注于数据结构和算法的可视化，提供了多种数据结构的动态演示，包括线性表、哈希表、堆等。它的可视化效果清晰，能够帮助你深入理解数据结构的内部工作原理。此外，网站还提供了算法复杂度分析的相关信息。本项目基于此网站修改。
-                    </li>
-                    <li style="line-height: 2;"><a href="https://algorithm-visualizer.org/">2. Algorithm Visualizer</a>
-                        <br>
-                        特点：这个网站不仅可以可视化常见的数据结构和算法，还支持用户自定义代码并实时可视化执行过程。它提供了交互式的界面，让你可以自己控制演示的速度和步骤，更好地探索数据结构和算法的细节。
-                         <ul>
-
-                            <li><a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">广度优先搜索
-                                (Breadth - First Search)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/brute-force/depth-first-search">深度优先搜索
-                                (Depth - First Search)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/branch-and-bound/topological-sort">拓扑排序
-                                (Topological Sort，分支限界法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/greedy/kruskals-minimum-spanning-tree">克鲁斯卡尔最小生成树算法
-                                (Kruskal's Minimum Spanning Tree，贪心算法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/greedy/prims-minimum-spanning-tree">普里姆最小生成树算法
-                                (Prim's Minimum Spanning Tree，贪心算法)</a></li>
-                            <li>
-                                <a href="https://algorithm-visualizer.org/dynamic-programming/floyd-warshalls-shortest-path">弗洛伊德
-                                    - 沃肖尔最短路径 (Floyd - Warshall's Shortest Path，动态规划)</a></li>
-
-                            <li><a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">二分搜索
-                                (Binary Search，分支限界法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/branch-and-bound/binary-search-tree">二叉搜索树
-                                (Binary Search Tree，分支限界法)</a></li>
-
-                            <li><a href="https://algorithm-visualizer.org/brute-force/bubble-sort">冒泡排序 (Bubble
-                                Sort，暴力法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/brute-force/insertion-sort">插入排序
-                                (Insertion Sort，暴力法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/brute-force/selection-sort">选择排序
-                                (Selection Sort，暴力法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">归并排序 (Merge
-                                Sort，分治法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">快速排序
-                                (Quicksort，分治法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">桶排序 (Bucket
-                                Sort，分治法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">计数排序
-                                (Counting Sort，分治法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">基数排序 (Radix
-                                Sort，分治法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/brute-force/heapsort">堆排序
-                                (Heapsort，暴力法)</a></li>
-                            <li><a href="https://algorithm-visualizer.org/brute-force/shellsort">希尔排序
-                                (Shellsort，暴力法)</a></li>
-                            <li>
-                                <span>回溯法 (Backtracking)</span>
-                                <ul>
-                                    <li><a href="https://algorithm-visualizer.org/backtracking/hamiltonean-cycles">哈密顿回路
-                                        (Hamiltonean Cycles)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/backtracking/knights-tour-problem">骑士周游问题
-                                        (Knight's Tour Problem)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/backtracking/n-queens-problem">N皇后问题
-                                        (N-Queens Problem)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/backtracking/sum-of-subsets">子集和问题
-                                        (Sum of subsets)</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span>分支限界法 (Branch and Bound)</span>
-                                <ul>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/branch-and-bound/depth-limited-search">深度受限搜索
-                                            (Depth-Limited Search)</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span>暴力法 (Brute Force)</span>
-                                <ul>
-                                    <li><a href="https://algorithm-visualizer.org/brute-force/bipartiteness-test">二分性测试
-                                        (Bipartiteness Test)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/brute-force/bridge-finding">桥接查找
-                                        (Bridge Finding)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/brute-force/comb-sort">梳排序 (Comb
-                                        Sort)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/brute-force/cycle-sort">循环排序
-                                        (Cycle Sort)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/brute-force/flood-fill">漫水填充
-                                        (Flood Fill)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/brute-force/pagerank">网页排名
-                                        (PageRank)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/brute-force/pancake-sort">煎饼排序
-                                        (Pancake Sort)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/brute-force/rabin-karps-string-search">拉宾
-                                            - 卡普字符串搜索 (Rabin-Karp's String Search)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/brute-force/tarjans-strongly-connected-components">Tarjan强连通分量
-                                            (Tarjan's Strongly Connected Components)</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span>分治法 (Divide and Conquer)</span>
-                                <ul>
-                                    <li><a href="https://algorithm-visualizer.org/divide-and-conquer/pigeonhole-sort">鸽巢排序
-                                        (Pigeonhole Sort)</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span>动态规划 (Dynamic Programming)</span>
-                                <ul>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/bellman-fords-shortest-path">贝尔曼
-                                            - 福特最短路径 (Bellman-Ford's Shortest Path)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/catalan-number">卡特兰数
-                                        (Catalan Number)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">斐波那契数列
-                                            (Fibonacci Sequence)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/integer-partition">整数划分
-                                            (Integer Partition)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/knapsack-problem">背包问题
-                                        (Knapsack Problem)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/knuth-morris-pratts-string-search">克努特
-                                            - 莫里斯 - 普拉特字符串搜索 (Knuth-Morris-Pratt's String Search)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/levenshteins-edit-distance">莱文斯坦编辑距离
-                                            (Levenshtein's Edit Distance)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/longest-common-subsequence">最长公共子序列
-                                            (Longest Common Subsequence)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/longest-increasing-subsequence">最长递增子序列
-                                            (Longest Increasing Subsequence)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/longest-palindromic-subsequence">最长回文子序列
-                                            (Longest Palindromic Subsequence)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/maximum-subarray">最大子数组
-                                        (Maximum Subarray)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/maximum-sum-path">最大和路径
-                                        (Maximum Sum Path)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/nth-factorial">第n个阶乘
-                                        (Nth Factorial)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/pascals-triangle">杨辉三角
-                                        (Pascal's Triangle)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/shortest-common-supersequence">最短公共超序列
-                                            (Shortest Common Supersequence)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/dynamic-programming/sieve-of-eratosthenes">埃拉托色尼筛法
-                                            (Sieve of Eratosthenes)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/sliding-window">滑动窗口
-                                        (Sliding Window)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/ugly-numbers">丑数
-                                        (Ugly Numbers)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/z-string-search">Z字符串搜索
-                                        (Z String Search)</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span>贪心算法 (Greedy)</span>
-                                <ul>
-                                    <li><a href="https://algorithm-visualizer.org/greedy/boyermoores-majority-vote">博耶
-                                        - 摩尔多数投票算法 (Boyer–Moore's Majority Vote)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/greedy/dijkstras-shortest-path">迪杰斯特拉最短路径算法
-                                        (Dijkstra's Shortest Path)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/greedy/job-scheduling-problem">作业调度问题
-                                        (Job Scheduling Problem)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/greedy/stable-matching">稳定匹配
-                                        (Stable Matching)</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span>简单递归 (Simple Recursive)</span>
-                                <ul>
-                                    <li><a href="https://algorithm-visualizer.org/simple-recursive/cellular-automata">元胞自动机
-                                        (Cellular Automata)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/simple-recursive/cycle-detection">循环检测
-                                        (Cycle Detection)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/simple-recursive/euclidean-greatest-common-divisor">欧几里得最大公约数算法
-                                            (Euclidean Greatest Common Divisor)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/simple-recursive/nth-factorial">第n个阶乘
-                                        (Nth Factorial)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/simple-recursive/suffix-array">后缀数组
-                                        (Suffix Array)</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span>未分类 (Uncategorized)</span>
-                                <ul>
-                                    <li><a href="https://algorithm-visualizer.org/uncategorized/affine-cipher">仿射密码
-                                        (Affine Cipher)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/uncategorized/caesar-cipher">凯撒密码
-                                        (Caesar Cipher)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/uncategorized/freivalds-matrix-multiplication-verification">Freivalds矩阵乘法验证
-                                            (Freivalds' Matrix-Multiplication Verification)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/uncategorized/k-means-clustering">K均值聚类
-                                        (K-Means Clustering)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/uncategorized/magic-square">幻方
-                                        (Magic Square)</a></li>
-                                    <li><a href="https://algorithm-visualizer.org/uncategorized/maze-generation">迷宫生成
-                                        (Maze Generation)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/uncategorized/miller-rabins-primality-test">米勒
-                                            - 拉宾素性测试 (Miller-Rabin's Primality Test)</a></li>
-                                    <li>
-                                        <a href="https://algorithm-visualizer.org/uncategorized/shortest-unsorted-continuous-subarray">最短未排序连续子数组
-                                            (Shortest Unsorted Continuous Subarray)</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a rel="noopener" target="_blank" href="https://github.com/algorithm-visualizer/algorithm-visualizer/wiki">API参考
-                                    (API Reference)</a></li>
-                            <li>
-                                <a rel="noopener" target="_blank" href="https://github.com/algorithm-visualizer/algorithm-visualizer">在GitHub上Fork我
-                                    (Fork me on GitHub)</a></li>
-                        </ul>
-                    </li>
-                    <li style="line-height: 2;"><a href="https://visualgo.net/zh">3. VisuAlgo</a>
-                        <br>
-                        特点：该网站提供了丰富的数据结构和算法可视化演示，涵盖了链表、栈、队列、树、图等常见数据结构，以及排序、搜索等算法。其界面简洁直观，通过动画展示数据结构的操作过程，易于理解。同时，网站还提供了代码示例，方便你对照学习。
-                        <ul>
-                            <li><a href="https://visualgo.net/zh/array">数组</a></li>
-                            <li><a href="https://visualgo.net/zh/list">链表：单向链表、双向链表、双端队列</a></li>
-                            <li><a href="https://visualgo.net/zh/ufds">并查集：路径压缩、按秩合并</a></li>
-                            <li><a href="https://visualgo.net/zh/graphds">图结构：二分图、有向无环图</a></li>
-                            <li><a href="https://visualgo.net/zh/dfsbfs">图遍历：广度优先搜索、深度优先搜索</a></li>
-                            <li><a href="https://visualgo.net/zh/mst">最小生成树：Prim算法、Kruskal算法</a></li>
-                            <li><a href="https://visualgo.net/zh/sssp">单源最短路径：Dijkstra算法、Bellman - Ford算法</a>
-                            </li>
-                            <li><a href="https://visualgo.net/zh/bst">二叉搜索树、AVL树</a></li>
-                            <li><a href="https://visualgo.net/zh/heap">二叉堆与优先队列</a></li>
-                            <li><a href="https://visualgo.net/zh/fenwicktree">树状数组（芬威克树）：范围求和、点更新</a>
-                            </li>
-                            <li><a href="https://visualgo.net/zh/segmenttree">线段树：范围求和、求最小最大值</a></li>
-                            <li><a href="https://visualgo.net/zh/hashtable">哈希表：开放地址法（线性探测、二次探测）</a>
-                            </li>
-                            <li><a href="https://visualgo.net/zh/suffixtree">后缀树：字符串匹配、最长公共子序列</a></li>
-                            <li><a href="https://visualgo.net/zh/suffixarray">后缀数组：最长公共前缀、字符串匹配</a></li>
-                            <li>
-                                <a href="https://visualgo.net/zh/sorting">排序算法：冒泡、选择、插入、归并、快速、随机快速、计数、基数排序</a>
-                            </li>
-                            <li><a href="https://visualgo.net/zh/maxflow">网络流：最大流算法（Edmonds - Karp、Dinic、Ford -
-                                Fulkerson）、最小割</a></li>
-                            <li><a href="https://visualgo.net/zh/matching">二分匹配：增强路径算法</a></li>
-                            <li><a href="https://visualgo.net/zh/mvc">最小顶点覆盖</a></li>
-                            <li><a href="https://visualgo.net/zh/steinertree">Steiner树</a></li>
-                            <li><a href="https://visualgo.net/zh/recursion">递归树/有向无环图与动态规划</a></li>
-                            <li><a href="https://visualgo.net/zh/bitmask">位掩码与位操作</a></li>
-                            <li><a href="https://visualgo.net/zh/cyclefinding">循环查找：弗洛伊德算法、龟兔赛跑算法</a>
-                            </li>
-                            <li><a href="https://visualgo.net/zh/polygon">计算几何：转换、切除、弯曲等操作</a></li>
-                            <li>
-                                <a href="https://visualgo.net/zh/convexhull">凸体船体：Andrew算法、单调链、葛立恒算法、Jarvis步进算法</a>
-                            </li>
-                            <li><a href="https://visualgo.net/zh/tsp">旅行商问题</a></li>
-                            <li><a href="https://visualgo.net/zh/reductions">NP - complete归约</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="https://algorithm-visualizer.org/backtracking/hamiltonean-cycles">哈密顿回路 (Hamiltonean Cycles)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/backtracking/knights-tour-problem">骑士周游问题 (Knight's Tour Problem)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/backtracking/n-queens-problem">N皇后问题 (N-Queens Problem)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/backtracking/sum-of-subsets">子集和问题 (Sum of subsets)</a></li>
                 </ul>
             </li>
+            <li><span>分支限界法 (Branch and Bound)</span>
+                <ul>
+                    <li><a href="https://algorithm-visualizer.org/branch-and-bound/depth-limited-search">深度受限搜索 (Depth-Limited Search)</a></li>
+                </ul>
+            </li>
+            <li><span>暴力法 (Brute Force)</span>
+                <ul>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/bipartiteness-test">二分性测试 (Bipartiteness Test)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/bridge-finding">桥接查找 (Bridge Finding)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/comb-sort">梳排序 (Comb Sort)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/cycle-sort">循环排序 (Cycle Sort)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/flood-fill">漫水填充 (Flood Fill)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/pagerank">网页排名 (PageRank)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/pancake-sort">煎饼排序 (Pancake Sort)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/rabin-karps-string-search">拉宾 - 卡普字符串搜索 (Rabin-Karp's String Search)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/brute-force/tarjans-strongly-connected-components">Tarjan强连通分量 (Tarjan's Strongly Connected Components)</a></li>
+                </ul>
+            </li>
+            <li><span>分治法 (Divide and Conquer)</span>
+                <ul>
+                    <li><a href="https://algorithm-visualizer.org/divide-and-conquer/pigeonhole-sort">鸽巢排序 (Pigeonhole Sort)</a></li>
+                </ul>
+            </li>
+            <li><span>动态规划 (Dynamic Programming)</span>
+                <ul>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/bellman-fords-shortest-path">贝尔曼 - 福特最短路径 (Bellman-Ford's Shortest Path)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/catalan-number">卡特兰数 (Catalan Number)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">斐波那契数列 (Fibonacci Sequence)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/integer-partition">整数划分 (Integer Partition)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/knapsack-problem">背包问题 (Knapsack Problem)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/knuth-morris-pratts-string-search">克努特 - 莫里斯 - 普拉特字符串搜索 (Knuth-Morris-Pratt's String Search)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/levenshteins-edit-distance">莱文斯坦编辑距离 (Levenshtein's Edit Distance)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/longest-common-subsequence">最长公共子序列 (Longest Common Subsequence)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/longest-increasing-subsequence">最长递增子序列 (Longest Increasing Subsequence)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/longest-palindromic-subsequence">最长回文子序列 (Longest Palindromic Subsequence)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/maximum-subarray">最大子数组 (Maximum Subarray)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/maximum-sum-path">最大和路径 (Maximum Sum Path)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/nth-factorial">第n个阶乘 (Nth Factorial)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/pascals-triangle">杨辉三角 (Pascal's Triangle)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/shortest-common-supersequence">最短公共超序列 (Shortest Common Supersequence)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/sieve-of-eratosthenes">埃拉托色尼筛法 (Sieve of Eratosthenes)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/sliding-window">滑动窗口 (Sliding Window)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/ugly-numbers">丑数 (Ugly Numbers)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/dynamic-programming/z-string-search">Z字符串搜索 (Z String Search)</a></li>
+                </ul>
+            </li>
+            <li><span>贪心算法 (Greedy)</span>
+                <ul>
+                    <li><a href="https://algorithm-visualizer.org/greedy/boyermoores-majority-vote">博耶 - 摩尔多数投票算法 (Boyer–Moore's Majority Vote)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/greedy/dijkstras-shortest-path">迪杰斯特拉最短路径算法 (Dijkstra's Shortest Path)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/greedy/job-scheduling-problem">作业调度问题 (Job Scheduling Problem)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/greedy/stable-matching">稳定匹配 (Stable Matching)</a></li>
+                </ul>
+            </li>
+            <li><span>简单递归 (Simple Recursive)</span>
+                <ul>
+                    <li><a href="https://algorithm-visualizer.org/simple-recursive/cellular-automata">元胞自动机 (Cellular Automata)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/simple-recursive/cycle-detection">循环检测 (Cycle Detection)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/simple-recursive/euclidean-greatest-common-divisor">欧几里得最大公约数算法 (Euclidean Greatest Common Divisor)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/simple-recursive/nth-factorial">第n个阶乘 (Nth Factorial)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/simple-recursive/suffix-array">后缀数组 (Suffix Array)</a></li>
+                </ul>
+            </li>
+            <li><span>未分类 (Uncategorized)</span>
+                <ul>
+                    <li><a href="https://algorithm-visualizer.org/uncategorized/affine-cipher">仿射密码 (Affine Cipher)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/uncategorized/caesar-cipher">凯撒密码 (Caesar Cipher)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/uncategorized/freivalds-matrix-multiplication-verification">Freivalds矩阵乘法验证 (Freivalds' Matrix-Multiplication Verification)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/uncategorized/k-means-clustering">K均值聚类 (K-Means Clustering)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/uncategorized/magic-square">幻方 (Magic Square)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/uncategorized/maze-generation">迷宫生成 (Maze Generation)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/uncategorized/miller-rabins-primality-test">米勒 - 拉宾素性测试 (Miller-Rabin's Primality Test)</a></li>
+                    <li><a href="https://algorithm-visualizer.org/uncategorized/shortest-unsorted-continuous-subarray">最短未排序连续子数组 (Shortest Unsorted Continuous Subarray)</a></li>
+                </ul>
+            </li>
+            <li><a rel="noopener" target="_blank" href="https://github.com/algorithm-visualizer/algorithm-visualizer/wiki">API参考 (API Reference)</a></li>
+            <li><a rel="noopener" target="_blank" href="https://github.com/algorithm-visualizer/algorithm-visualizer">在GitHub上Fork我 (Fork me on GitHub)</a></li>
+        </ul>
+        <div><a href="https://visualgo.net/zh">3. VisuAlgo</a><br>特点：该网站提供了丰富的数据结构和算法可视化演示，涵盖了链表、栈、队列、树、图等常见数据结构，以及排序、搜索等算法。其界面简洁直观，通过动画展示数据结构的操作过程，易于理解。同时，网站还提供了代码示例，方便你对照学习。</div>
+        <ul>
+            <li><a href="https://visualgo.net/zh/array">数组</a></li>
+            <li><a href="https://visualgo.net/zh/list">链表：单向链表、双向链表、双端队列</a></li>
+            <li><a href="https://visualgo.net/zh/ufds">并查集：路径压缩、按秩合并</a></li>
+            <li><a href="https://visualgo.net/zh/graphds">图结构：二分图、有向无环图</a></li>
+            <li><a href="https://visualgo.net/zh/dfsbfs">图遍历：广度优先搜索、深度优先搜索</a></li>
+            <li><a href="https://visualgo.net/zh/mst">最小生成树：Prim算法、Kruskal算法</a></li>
+            <li><a href="https://visualgo.net/zh/sssp">单源最短路径：Dijkstra算法、Bellman - Ford算法</a></li>
+            <li><a href="https://visualgo.net/zh/bst">二叉搜索树、AVL树</a></li>
+            <li><a href="https://visualgo.net/zh/heap">二叉堆与优先队列</a></li>
+            <li><a href="https://visualgo.net/zh/fenwicktree">树状数组（芬威克树）：范围求和、点更新</a></li>
+            <li><a href="https://visualgo.net/zh/segmenttree">线段树：范围求和、求最小最大值</a></li>
+            <li><a href="https://visualgo.net/zh/hashtable">哈希表：开放地址法（线性探测、二次探测）</a></li>
+            <li><a href="https://visualgo.net/zh/suffixtree">后缀树：字符串匹配、最长公共子序列</a></li>
+            <li><a href="https://visualgo.net/zh/suffixarray">后缀数组：最长公共前缀、字符串匹配</a></li>
+            <li><a href="https://visualgo.net/zh/sorting">排序算法：冒泡、选择、插入、归并、快速、随机快速、计数、基数排序</a></li>
+            <li><a href="https://visualgo.net/zh/maxflow">网络流：最大流算法（Edmonds - Karp、Dinic、Ford - Fulkerson）、最小割</a></li>
+            <li><a href="https://visualgo.net/zh/matching">二分匹配：增强路径算法</a></li>
+            <li><a href="https://visualgo.net/zh/mvc">最小顶点覆盖</a></li>
+            <li><a href="https://visualgo.net/zh/steinertree">Steiner树</a></li>
+            <li><a href="https://visualgo.net/zh/recursion">递归树/有向无环图与动态规划</a></li>
+            <li><a href="https://visualgo.net/zh/bitmask">位掩码与位操作</a></li>
+            <li><a href="https://visualgo.net/zh/cyclefinding">循环查找：弗洛伊德算法、龟兔赛跑算法</a></li>
+            <li><a href="https://visualgo.net/zh/polygon">计算几何：转换、切除、弯曲等操作</a></li>
+            <li><a href="https://visualgo.net/zh/convexhull">凸体船体：Andrew算法、单调链、葛立恒算法、Jarvis步进算法</a></li>
+            <li><a href="https://visualgo.net/zh/tsp">旅行商问题</a></li>
+            <li><a href="https://visualgo.net/zh/reductions">NP - complete归约</a></li>
+        </ul>
     </div>
-    <div class="footer">版权所有 2011 <a href="http://www.cs.usfca.edu/galles">大卫·加勒斯 </a></div>
+    <div class="footer">数据结构可视化</div>
 
 </div>
-
+<script>
+    // 获取页面中所有的 <a> 标签
+    const links = document.getElementsByTagName('a');
+    // 遍历所有 <a> 标签
+    for (let i = 0; i < links.length; i++) {
+        // 为每个 <a> 标签添加 target="_blank" 属性
+        links[i].setAttribute('target', '_blank');
+    }
+</script>
 </body>
 </html>

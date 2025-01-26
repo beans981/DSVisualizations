@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 确保html和body元素占满整个屏幕 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* 隐藏滚动条 */
+        }
+
+        /* 使容器和Ruffle播放器全屏和自适应 */
+        #container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container ruffle-player {
+            flex-shrink: 0; /* 防止播放器被压缩 */
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script src="ruffle.js"></script>
+<script>
+    window.addEventListener('load', async () => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById('container');
+        RufflePlayer.config = {
+            autoplay: "on",
+            unmuteOverlay: "hidden"
+        };
+        container.appendChild(player);
+
+        // 获取 URL 中的查询参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const swfFile = urlParams.get('file');
+
+        // 检查是否有有效的查询参数
+        if (swfFile) {
+            player.load(swfFile);
+        } else {
+            console.error('未提供有效的 SWF 文件地址参数。');
+        }
+    });
+
+</script>
+</body>
+</html>
