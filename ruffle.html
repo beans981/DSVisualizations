@@ -26,6 +26,15 @@
         }
     </style>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play SWF with Ruffle</title>
+</head>
+
 <body>
 <div id="container"></div>
 <script src="ruffle.js"></script>
@@ -46,12 +55,49 @@
 
         // 检查是否有有效的查询参数
         if (swfFile) {
-            player.load(swfFile);
+            if (swfFile.endsWith('.swf')) {
+                // 如果是 SWF 文件，直接加载
+                player.load(swfFile);
+            } else if (swfFile.endsWith('.html')) {
+                try {
+                    // 读取 HTML 文件内容
+                    const response = await fetch(swfFile);
+                    const htmlContent = await response.text();
+
+                    // 使用正则表达式提取 Base64 编码的 SWF 数据
+                    const regex = /const swf="([^"]+)";/;
+                    const match = htmlContent.match(regex);
+                    if (match && match[1]) {
+                        const base64Data = match[1];
+                        // 将 Base64 数据解码为二进制数据
+                        const binaryData = atob(base64Data);
+                        const arrayBuffer = new ArrayBuffer(binaryData.length);
+                        const uint8Array = new Uint8Array(arrayBuffer);
+                        for (let i = 0; i < binaryData.length; i++) {
+                            uint8Array[i] = binaryData.charCodeAt(i);
+                        }
+
+                        // 创建 Blob 对象
+                        const blob = new Blob([uint8Array], { type: 'application/x-shockwave-flash' });
+                        // 生成 Blob URL
+                        const blobUrl = URL.createObjectURL(blob);
+
+                        // 加载 Blob URL
+                        player.load(blobUrl);
+                    } else {
+                        console.error('未在 HTML 文件中找到有效的 SWF Base64 数据。');
+                    }
+                } catch (error) {
+                    console.error('读取 HTML 文件时出错:', error);
+                }
+            } else {
+                console.error('不支持的文件类型。');
+            }
         } else {
             console.error('未提供有效的 SWF 文件地址参数。');
         }
     });
-
 </script>
 </body>
+
 </html>
